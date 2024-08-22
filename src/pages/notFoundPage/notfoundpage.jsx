@@ -1,7 +1,21 @@
 import React from "react";
 
 const NotFoundPage = () => {
-  return <div>NotFoundPage</div>;
+  return (
+    <div className="container">
+      <div className="notfound">
+        <figure className="notfound__images">
+          <img src="/images/notfound/flower.svg" alt="" />
+          <img src="/images/notfound/boy.svg" alt="Logo" />
+          <div className="notfound__separate"></div>
+        </figure>
+        <div className="notfound__content">
+          <p className="notfound__desc">Oopps!</p>
+          <h1 className="notfound__heading">Page Not Found</h1>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default NotFoundPage;

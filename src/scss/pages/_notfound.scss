@@ -1,0 +1,25 @@
+.notfound {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  gap: 64px;
+  &__separate {
+    width: calc(100% + 50px);
+    height: 1px;
+    background-color: #333;
+  }
+  &__desc {
+    color: var(--Typography-2, #676a6c);
+    font-size: 6.2rem;
+    font-weight: 500;
+    line-height: 111.29%;
+  }
+  &__heading {
+    margin-top: 19px;
+    color: var(--Typography-1, #2d3134);
+    font-size: 6.2rem;
+    font-weight: 600;
+    line-height: 111.29%; /**/
+  }
+}

@@ -6,33 +6,58 @@ const activeClass = (params) => {
 
 const Header = () => {
   return (
-    <ul>
-      <li>
-        <NavLink to="/" className={activeClass}>
-          Home
-        </NavLink>
-      </li>
-      <li>
-        <NavLink to="/about" className={activeClass}>
-          About
-        </NavLink>
-      </li>
-      <li>
-        <NavLink to="/destinations" className={activeClass}>
-          Destinations
-        </NavLink>
-      </li>
-      <li>
-        <NavLink to="/blog" className={activeClass}>
-          Blog
-        </NavLink>
-      </li>
-      <li>
-        <NavLink to="/contact" className={activeClass}>
-          Contact
-        </NavLink>
-      </li>
-    </ul>
+    <div className="container">
+      <header className="header">
+        <figure className="logo">
+          <img src="./images/Logo.svg" alt="logo" />
+        </figure>
+        <nav className="header__navbar">
+          <ul className="header__list">
+            <li>
+              <NavLink
+                to="/"
+                className={(params) => `${activeClass(params)} header__link`}
+              >
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/about"
+                className={(params) => `${activeClass(params)} header__link`}
+              >
+                About
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/destinations"
+                className={(params) => `${activeClass(params)} header__link`}
+              >
+                Destinations
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/blog"
+                className={(params) => `${activeClass(params)} header__link`}
+              >
+                Blog
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/contact"
+                className={(params) => `${activeClass(params)} header__link`}
+              >
+                Contact
+              </NavLink>
+            </li>
+          </ul>
+        </nav>
+        <button className="btn btn__primary">Contact us</button>
+      </header>
+    </div>
   );
 };
 export default Header;

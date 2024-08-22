@@ -1,6 +1,4 @@
-p {
-  color: red;
-}
-body {
-  font-family: "Inter 18pt";
-}
+@use "./base";
+@use "./components";
+@use "./pages";
+@use "./layout";
