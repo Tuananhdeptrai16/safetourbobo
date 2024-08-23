@@ -1,6 +1,6 @@
 import React from "react";
 import { DownOutlined, SmileOutlined, UserOutlined } from "@ant-design/icons";
-import { Dropdown, Space, Menu } from "antd";
+import { Dropdown, Space } from "antd";
 
 // Định nghĩa các mục menu cho từng dropdown
 const menuItems1 = [
@@ -83,37 +83,49 @@ const MultiDropdowns = () => (
     <div className="hero__search-list">
       <div className="hero__search--item">
         <p className="hero__search-title">Location</p>
-        <Dropdown menu={<Menu items={menuItems1} />}>
-          <a onClick={(e) => e.preventDefault()}>
-            <Space>
-              Location
-              <DownOutlined />
-            </Space>
-          </a>
-        </Dropdown>
+        <div className="hero__item">
+          <Dropdown menu={{ items: menuItems1 }}>
+            <button onClick={(e) => e.preventDefault()}>
+              <Space>
+                Bali, Indonesia
+                <DownOutlined />
+              </Space>
+            </button>
+          </Dropdown>
+        </div>
       </div>
       <div className="hero__search--item">
         <p className="hero__search-title">City</p>
-        <Dropdown menu={<Menu items={menuItems2} />}>
-          <a onClick={(e) => e.preventDefault()}>
-            <Space>
-              City
-              <DownOutlined />
-            </Space>
-          </a>
-        </Dropdown>
+        <div className="hero__item">
+          <Dropdown menu={{ items: menuItems2 }}>
+            <button onClick={(e) => e.preventDefault()}>
+              <Space>
+                Prambanan
+                <DownOutlined />
+              </Space>
+            </button>
+          </Dropdown>
+        </div>
       </div>
       <div className="hero__search--item">
-        <p className="hero__search-title">City</p>
-        <Dropdown menu={<Menu items={menuItems3} />}>
-          <button onClick={(e) => e.preventDefault()}>
-            <Space>
-              Guest
-              <DownOutlined />
-            </Space>
-          </button>
-        </Dropdown>
+        <p className="hero__search-title">Guest</p>
+        <div className="hero__item">
+          <Dropdown menu={{ items: menuItems3 }}>
+            <button onClick={(e) => e.preventDefault()}>
+              <Space>
+                8 Persons
+                <DownOutlined />
+              </Space>
+            </button>
+          </Dropdown>
+        </div>
       </div>
+    </div>
+    <div className="hero__search-btn">
+      <button className="btn hero__search-btn--button">
+        <img src="./images/icon/search.svg" alt="search" />
+        Search
+      </button>
     </div>
   </div>
 );
