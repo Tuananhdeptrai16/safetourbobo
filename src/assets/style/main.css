@@ -1681,6 +1681,7 @@ strong {
   .hero__search {
     flex-direction: column;
     align-items: flex-start;
+    margin-top: 51px;
   }
 }
 .hero__item {
@@ -1704,6 +1705,11 @@ strong {
 
 .product {
   margin-top: 140px;
+}
+@media (max-width: 767.98px) {
+  .product {
+    margin-top: 60px;
+  }
 }
 .product__content {
   display: flex;
@@ -1828,6 +1834,109 @@ strong {
 
 .slider-container {
   margin-top: 30px;
+}
+
+.reason {
+  margin-top: 142px;
+}
+@media (max-width: 767.98px) {
+  .reason {
+    margin-top: 60px;
+  }
+}
+.reason__img-wrap {
+  position: relative;
+  padding-top: 100%;
+  height: 518px;
+}
+.reason__img {
+  border-radius: 64px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.reason__heading {
+  margin-top: 19px;
+  color: #2d3134;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 125%;
+}
+@media (max-width: 767.98px) {
+  .reason__heading {
+    margin-top: 0;
+    font-size: 2.4rem;
+  }
+}
+.reason__desc {
+  width: 493px;
+  margin-top: 16px;
+  color: #676a6c;
+  font-family: "Inter 18pt";
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 162.5%;
+}
+@media (max-width: 991.98px) {
+  .reason__desc {
+    width: 300px;
+  }
+}
+@media (max-width: 767.98px) {
+  .reason__desc {
+    margin-top: 10px;
+    font-size: 1.4rem;
+    width: 335px;
+  }
+}
+.reason__list {
+  margin-top: 59px;
+}
+@media (max-width: 991.98px) {
+  .reason__list {
+    margin-top: 20px;
+  }
+}
+.reason__item {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+@media (max-width: 991.98px) {
+  .reason__item {
+    gap: 20px;
+  }
+}
+.reason__item--desc {
+  margin-top: 8px;
+  width: 319px;
+  color: #676a6c;
+  font-family: "Inter 18pt";
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 142.857%;
+}
+@media (max-width: 991.98px) {
+  .reason__item--desc {
+    width: 250px;
+  }
+}
+.reason__item + .reason__item {
+  margin-top: 40px;
+}
+@media (max-width: 991.98px) {
+  .reason__item + .reason__item {
+    margin-top: 10px;
+  }
+}
+.reason__title {
+  color: #2d3134;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 162.5%;
 }
 
 .header {
