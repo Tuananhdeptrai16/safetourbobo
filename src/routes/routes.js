@@ -10,11 +10,11 @@ import NotFoundPage from "../pages/notFoundPage/notfoundpage";
 const AppRoutes = () => {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/destinations" element={<Destination />} />
-      <Route path="/blog" element={<Blog />} />
-      <Route path="/contact" element={<Contact />} />
+      <Route path="/safetourbobo/" element={<Home />} />
+      <Route path="/safetourbobo/about" element={<About />} />
+      <Route path="/safetourbobo/destinations" element={<Destination />} />
+      <Route path="/safetourbobo/blog" element={<Blog />} />
+      <Route path="/safetourbobo/contact" element={<Contact />} />
       <Route path="*" element={<NotFoundPage />} />
     </Routes>
   );

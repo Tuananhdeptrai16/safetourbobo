@@ -9,16 +9,23 @@ import "slick-carousel/slick/slick-theme.css";
 function App() {
   const [showHeaderFooter, setShowHeaderFooter] = useState(true);
   const location = useLocation();
-
   useEffect(() => {
-    const validPaths = ["/", "/about", "/destinations", "/blog", "/contact"];
+    const validPaths = [
+      "/safetourbobo",
+      "/safetourbobo/",
+      "/safetourbobo/about",
+      "/safetourbobo/destinations",
+      "/safetourbobo/blog",
+      "/safetourbobo/contact",
+    ];
+    console.log(location.pathname);
     if (validPaths.includes(location.pathname)) {
       setShowHeaderFooter(true);
     } else {
       setShowHeaderFooter(false);
     }
   }, [location]);
-
+  console.log(showHeaderFooter);
   return (
     <div>
       {showHeaderFooter && <Header />}

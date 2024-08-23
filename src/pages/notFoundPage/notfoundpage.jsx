@@ -5,8 +5,14 @@ const NotFoundPage = () => {
     <div className="container">
       <div className="notfound">
         <figure className="notfound__images">
-          <img src="/images/notfound/flower.svg" alt="" />
-          <img src="/images/notfound/boy.svg" alt="Logo" />
+          <img
+            src={`${process.env.PUBLIC_URL}/images/notfound/flower.svg`}
+            alt=""
+          />
+          <img
+            src={`${process.env.PUBLIC_URL}/images/notfound/boy.svg`}
+            alt="Logo"
+          />
           <div className="notfound__separate"></div>
         </figure>
         <div className="notfound__content">

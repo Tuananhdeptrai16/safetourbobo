@@ -1,6 +1,8 @@
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
+
 const activeClass = (params) => {
+  console.log(params.isActive); // Kiểm tra giá trị isActive
   return params.isActive ? "active-item" : "";
 };
 
@@ -8,19 +10,20 @@ const Header = () => {
   const [show, setShow] = useState(false);
   const handleClickChangeShow = () => {
     setShow(!show);
-    console.log(show);
   };
+
   return (
     <div className="container">
       <header className="header">
         <figure className="logo">
-          <img src="./images/Logo.svg" alt="logo" />
+          <img src={`${process.env.PUBLIC_URL}/images/Logo.svg`} alt="logo" />
         </figure>
         <nav className="header__navbar">
           <ul className="header__list">
             <li>
               <NavLink
-                to="/"
+                to={`${process.env.PUBLIC_URL}/`}
+                end
                 className={(params) => `${activeClass(params)} header__link`}
               >
                 Home
@@ -28,7 +31,7 @@ const Header = () => {
             </li>
             <li>
               <NavLink
-                to="/about"
+                to={`${process.env.PUBLIC_URL}/about`}
                 className={(params) => `${activeClass(params)} header__link`}
               >
                 About
@@ -36,7 +39,7 @@ const Header = () => {
             </li>
             <li>
               <NavLink
-                to="/destinations"
+                to={`${process.env.PUBLIC_URL}/destinations`}
                 className={(params) => `${activeClass(params)} header__link`}
               >
                 Destinations
@@ -44,7 +47,7 @@ const Header = () => {
             </li>
             <li>
               <NavLink
-                to="/blog"
+                to={`${process.env.PUBLIC_URL}/blog`}
                 className={(params) => `${activeClass(params)} header__link`}
               >
                 Blog
@@ -52,7 +55,7 @@ const Header = () => {
             </li>
             <li>
               <NavLink
-                to="/contact"
+                to={`${process.env.PUBLIC_URL}/contact`}
                 className={(params) => `${activeClass(params)} header__link`}
               >
                 Contact
@@ -64,7 +67,7 @@ const Header = () => {
           <button className="btn header__btn">Contact us</button>
           <button onClick={handleClickChangeShow} className="header__showMenu">
             <img
-              src="./images/icon/Menu.svg"
+              src={`${process.env.PUBLIC_URL}/images/icon/Menu.svg`}
               className="d-none d-lg-block"
               alt="Menu"
             />
@@ -72,11 +75,14 @@ const Header = () => {
           <div className={`${show ? "active" : ""} header__menu`}>
             <ul className="header__menu-dropdown">
               <figure className="logo">
-                <img src="./images/Logo.svg" alt="logo" />
+                <img
+                  src={`${process.env.PUBLIC_URL}/images/Logo.svg`}
+                  alt="logo"
+                />
               </figure>
               <li>
                 <NavLink
-                  to="/"
+                  to={`${process.env.PUBLIC_URL}/`}
                   className={(params) => `${activeClass(params)} header__link`}
                 >
                   Home
@@ -84,7 +90,7 @@ const Header = () => {
               </li>
               <li>
                 <NavLink
-                  to="/about"
+                  to={`${process.env.PUBLIC_URL}/about`}
                   className={(params) => `${activeClass(params)} header__link`}
                 >
                   About
@@ -92,7 +98,7 @@ const Header = () => {
               </li>
               <li>
                 <NavLink
-                  to="/destinations"
+                  to={`${process.env.PUBLIC_URL}/destinations`}
                   className={(params) => `${activeClass(params)} header__link`}
                 >
                   Destinations
@@ -100,7 +106,7 @@ const Header = () => {
               </li>
               <li>
                 <NavLink
-                  to="/blog"
+                  to={`${process.env.PUBLIC_URL}/blog`}
                   className={(params) => `${activeClass(params)} header__link`}
                 >
                   Blog
@@ -108,7 +114,7 @@ const Header = () => {
               </li>
               <li>
                 <NavLink
-                  to="/contact"
+                  to={`${process.env.PUBLIC_URL}/contact`}
                   className={(params) => `${activeClass(params)} header__link`}
                 >
                   Contact
@@ -116,7 +122,7 @@ const Header = () => {
               </li>
               <li>
                 <NavLink
-                  to="/contact"
+                  to={`${process.env.PUBLIC_URL}/contact`}
                   className={(params) =>
                     `${activeClass(params)} header__link d-none d-md-block`
                   }
@@ -135,4 +141,5 @@ const Header = () => {
     </div>
   );
 };
+
 export default Header;

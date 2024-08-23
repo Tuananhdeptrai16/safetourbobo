@@ -5,19 +5,20 @@ import SearchHero from "../../components/search/search";
 import Slider from "react-slick";
 
 const Home = () => {
+  const trendingRef = useRef(null);
   const countDownsList = [
     {
-      icon: "./images/icon/head.svg",
+      icon: `${process.env.PUBLIC_URL}/images/icon/head.svg`,
       total: 12,
       desc: "Years Experiences",
     },
     {
-      icon: "./images/icon/award.svg",
+      icon: `${process.env.PUBLIC_URL}/images/icon/award.svg`,
       total: 29,
       desc: "Awards Gained",
     },
     {
-      icon: "./images/icon/build.svg",
+      icon: `${process.env.PUBLIC_URL}/images/icon/build.svg`,
       total: "725+",
       desc: "Property Build",
     },
@@ -25,7 +26,7 @@ const Home = () => {
   const products = [
     {
       id: 1,
-      img: `./images/product/item1.jpg`,
+      img: `${process.env.PUBLIC_URL}/images/product/item1.jpg`,
       price: `$150/day`,
       title: "Nha Trang",
       location: "Nha Trang, VietNam",
@@ -34,7 +35,7 @@ const Home = () => {
     },
     {
       id: 2,
-      img: `./images/product/item2.jpg`,
+      img: `${process.env.PUBLIC_URL}/images/product/item2.jpg`,
       price: `$110/day`,
       title: "Co To",
       location: "Dao CoTo, VietNam",
@@ -43,7 +44,7 @@ const Home = () => {
     },
     {
       id: 3,
-      img: `./images/product/item3.jpg`,
+      img: `${process.env.PUBLIC_URL}/images/product/item3.jpg`,
       price: `$136/day`,
       title: "Ha Long Bay",
       location: "Quang Ninh, VietNam",
@@ -52,7 +53,7 @@ const Home = () => {
     },
     {
       id: 4,
-      img: `./images/product/item4.jpg`,
+      img: `${process.env.PUBLIC_URL}/images/product/item4.jpg`,
       price: `$136/day`,
       title: "Cat Ba island",
       location: "Quang Ninh, Viet Nam",
@@ -61,7 +62,7 @@ const Home = () => {
     },
     {
       id: 5,
-      img: `./images/product/item5.jpg`,
+      img: `${process.env.PUBLIC_URL}/images/product/item5.jpg`,
       price: `$136/day`,
       title: "Ha Giang",
       location: "Ha Giang , Viet Nam",
@@ -70,7 +71,7 @@ const Home = () => {
     },
     {
       id: 6,
-      img: `./images/product/item6.jpg`,
+      img: `${process.env.PUBLIC_URL}/images/product/item6.jpg`,
       price: `$136/day`,
       title: "Moc Chau",
       location: "Son La, Viet Nam",
@@ -81,19 +82,19 @@ const Home = () => {
   const reasons = [
     {
       id: 1,
-      icon: "./images/icon/word.svg",
+      icon: `${process.env.PUBLIC_URL}/images/icon/word.svg`,
       title: "We make all the process easy",
       desc: "A galley of type and scrambled it to make a type when an unknown printer took",
     },
     {
       id: 2,
-      icon: "./images/icon/vali.svg",
+      icon: `${process.env.PUBLIC_URL}/images/icon/vali.svg`,
       title: "Private & Customized Tours",
       desc: "A galley of type and scrambled it to make a type when an unknown printer took",
     },
     {
       id: 3,
-      icon: "./images/icon/book.svg",
+      icon: `${process.env.PUBLIC_URL}/images/icon/book.svg`,
       title: "Immigration & Passport Help",
       desc: "A galley of type and scrambled it to make a type when an unknown printer took",
     },
@@ -122,6 +123,50 @@ const Home = () => {
       },
     ],
   };
+  const trending = [
+    {
+      id: 1,
+      img: `${process.env.PUBLIC_URL}/images/trending/item1.jpg`,
+      title: "Mountain Hiking Tour",
+      place: "12 Places",
+      totalActivities: "3 Activites",
+      price: "$895.50",
+    },
+    {
+      id: 2,
+      img: `${process.env.PUBLIC_URL}/images/trending/item2.jpg`,
+      title: "Tran Skyline",
+      place: "12 Places",
+      totalActivities: "3 Activites",
+      price: "$769.99",
+    },
+    {
+      id: 3,
+      img: `${process.env.PUBLIC_URL}/images/trending/item3.jpg`,
+      title: "Forest Wild Life",
+      place: "12 Places",
+      totalActivities: "3 Activites",
+      price: "$939.80",
+    },
+    {
+      id: 4,
+      img: `${process.env.PUBLIC_URL}/images/trending/item2.png`,
+      title: "Mountain Hiking Tour",
+      place: "12 Places",
+      totalActivities: "3 Activites",
+      price: "$895.50",
+    },
+  ];
+  const handleNext = () => {
+    if (trendingRef.current) {
+      trendingRef.current.slickNext();
+    }
+  };
+  const handlePrev = () => {
+    if (trendingRef.current) {
+      trendingRef.current.slickPrev();
+    }
+  };
   return (
     <div className="container">
       <div className="hero">
@@ -137,7 +182,10 @@ const Home = () => {
                 <button className="btn hero__btn">Discover Now</button>
                 <div className="hero__more">
                   <figure className="hero__media">
-                    <img src="./images/icon/media.svg" alt="" />
+                    <img
+                      src={`${process.env.PUBLIC_URL}/images/icon/media.svg`}
+                      alt=""
+                    />
                   </figure>
                   <Link className="hero__link-more" href="">
                     Learn More
@@ -150,12 +198,12 @@ const Home = () => {
             <div className="hero__right">
               <figure className="hero__images">
                 <img
-                  src="./images/hero/Girl.png"
+                  src={`${process.env.PUBLIC_URL}/images/hero/Girl.png`}
                   className="hero__image"
                   alt=""
                 />
                 <img
-                  src="./images/hero/decor.svg"
+                  src={`${process.env.PUBLIC_URL}/images/hero/decor.svg`}
                   className="hero__decor-image"
                   alt=""
                 />
@@ -231,7 +279,7 @@ const Home = () => {
                     <h3 className="product__title">{item.title}</h3>
                     <div className="product__location">
                       <img
-                        src="./images/icon/location.svg"
+                        src={`${process.env.PUBLIC_URL}/images/icon/location.svg`}
                         alt="location"
                         className="product__icon"
                       />
@@ -239,11 +287,17 @@ const Home = () => {
                     </div>
                     <div className="product__time">
                       <div className="product__date">
-                        <img src="./images/icon/calender.svg" alt="calendar" />
+                        <img
+                          src={`${process.env.PUBLIC_URL}/images/icon/calender.svg`}
+                          alt="calendar"
+                        />
                         <p className="product__date">{item.time}</p>
                       </div>
                       <div className="product__durations">
-                        <img src="./images/icon/clock.svg" alt="clock" />
+                        <img
+                          src={`${process.env.PUBLIC_URL}/images/icon/clock.svg`}
+                          alt="clock"
+                        />
 
                         <p className="product__duration">{item.duration}</p>
                       </div>
@@ -260,7 +314,7 @@ const Home = () => {
           <div className="col-5 d-md-none">
             <figure className="reason__img-wrap">
               <img
-                src="./images/reason/image.jpg"
+                src={`${process.env.PUBLIC_URL}/images/reason/image.jpg`}
                 className="reason__img"
                 alt="VietNamTour"
               />
@@ -290,6 +344,81 @@ const Home = () => {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      <div className="trending">
+        <div className="trending__top">
+          <div className="trending__left">
+            <h2 className="trending__heading">Trending 2022</h2>
+            <p className="trending__desc">
+              Sost Brilliant reasons Entrada should be your one-stop-shop!
+            </p>
+          </div>
+          <div className="trending__right">
+            <button onClick={handlePrev} className="trending__btn-left">
+              <svg
+                width="54"
+                height="54"
+                viewBox="0 0 54 54"
+                fill="none"
+                stroke="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M18.1833 27.3174C18.1835 27.3176 18.1837 27.3178 18.1839 27.318L21.4496 30.568C21.6943 30.8115 22.09 30.8106 22.3335 30.5659C22.577 30.3212 22.5761 29.9255 22.3314 29.682L20.1388 27.5L33.375 27.5C33.7202 27.5 34 27.2202 34 26.875C34 26.5298 33.7202 26.25 33.375 26.25L20.1388 26.25L22.3314 24.068C22.5761 23.8245 22.577 23.4288 22.3335 23.1841C22.09 22.9394 21.6942 22.9386 21.4496 23.182L18.1838 26.432C18.1837 26.4322 18.1835 26.4324 18.1833 26.4326C17.9385 26.6769 17.9393 27.0739 18.1833 27.3174Z"
+                  fill="#505050"
+                />
+              </svg>
+            </button>
+            <button onClick={handleNext} className="trending__btn-right">
+              <svg
+                width="54"
+                height="54"
+                viewBox="0 0 54 54"
+                fill="none"
+                stroke="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M35.8167 27.3174C35.8165 27.3176 35.8163 27.3178 35.8161 27.318L32.5504 30.568C32.3057 30.8115 31.91 30.8106 31.6665 30.5659C31.423 30.3212 31.4239 29.9255 31.6686 29.682L33.8612 27.5H20.625C20.2798 27.5 20 27.2202 20 26.875C20 26.5298 20.2798 26.25 20.625 26.25H33.8612L31.6686 24.068C31.4239 23.8245 31.423 23.4288 31.6665 23.1841C31.91 22.9394 32.3058 22.9386 32.5504 23.182L35.8162 26.432C35.8163 26.4322 35.8165 26.4324 35.8167 26.4326C36.0615 26.6769 36.0607 27.0739 35.8167 27.3174Z"
+                  fill="#505050"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div className="slider-container">
+          <Slider {...settings} ref={trendingRef}>
+            {trending.map((item) => {
+              return (
+                <div key={item.id} className="trending__item">
+                  <div className="trending__item--content">
+                    <figure className="trending__images">
+                      <img src={item.img} alt={item.title} />
+                    </figure>
+                    <h4 className="trending__title">{item.title}</h4>
+                    <div className="trending__active">
+                      <p className="trending__place">{item.place}</p>
+                      <p className="trending__activities">
+                        {item.totalActivities}
+                      </p>
+                    </div>
+                    <div className="trending__booking">
+                      <span className="trending__price">{item.price}</span>
+                      <button className="btn trending__btn">Book Now</button>
+                    </div>
+                    <div className="trending__logo">
+                      <img
+                        src={`${process.env.PUBLIC_URL}/images/icon/logo.svg`}
+                        alt="logo"
+                      />
+                      <p className="trending__logo--desc">Safe Tour Agency</p>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </Slider>
         </div>
       </div>
     </div>

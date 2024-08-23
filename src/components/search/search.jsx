@@ -123,7 +123,10 @@ const MultiDropdowns = () => (
     </div>
     <div className="hero__search-btn">
       <button className="btn hero__search-btn--button">
-        <img src="./images/icon/search.svg" alt="search" />
+        <img
+          src={`${process.env.PUBLIC_URL}/images/icon/search.svg`}
+          alt="search"
+        />
         Search
       </button>
     </div>
