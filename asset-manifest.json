@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/safetourbobo/static/css/main.3e014d80.css",
-    "main.js": "/safetourbobo/static/js/main.524d6fa3.js",
+    "main.css": "/safetourbobo/static/css/main.22acb93c.css",
+    "main.js": "/safetourbobo/static/js/main.a3e00c2f.js",
     "static/media/Inter18pt-ExtraBoldItalic.woff": "/safetourbobo/static/media/Inter18pt-ExtraBoldItalic.cd7ea00943fc40334e7d.woff",
     "static/media/Inter18pt-BoldItalic.woff": "/safetourbobo/static/media/Inter18pt-BoldItalic.14579a7c81ecd18228b7.woff",
     "static/media/Inter24pt-ExtraBoldItalic.woff": "/safetourbobo/static/media/Inter24pt-ExtraBoldItalic.5961f4fa023addee38bd.woff",
@@ -103,11 +103,11 @@
     "static/media/slick.eot": "/safetourbobo/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/safetourbobo/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/safetourbobo/static/media/slick.295183786cd8a1389865.woff",
-    "main.3e014d80.css.map": "/safetourbobo/static/css/main.3e014d80.css.map",
-    "main.524d6fa3.js.map": "/safetourbobo/static/js/main.524d6fa3.js.map"
+    "main.22acb93c.css.map": "/safetourbobo/static/css/main.22acb93c.css.map",
+    "main.a3e00c2f.js.map": "/safetourbobo/static/js/main.a3e00c2f.js.map"
   },
   "entrypoints": [
-    "static/css/main.3e014d80.css",
-    "static/js/main.524d6fa3.js"
+    "static/css/main.22acb93c.css",
+    "static/js/main.a3e00c2f.js"
   ]
 }
