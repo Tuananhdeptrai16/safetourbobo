@@ -72,6 +72,7 @@
   z-index: 8;
   opacity: 0;
   visibility: hidden;
+  backdrop-filter: blur(5px); /* Làm mờ các phần tử phía sau */
 }
 .active {
   transform: translateX(0);

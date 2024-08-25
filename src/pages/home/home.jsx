@@ -3,8 +3,46 @@ import { Link } from "react-router-dom";
 import { TimerCircle } from "../../components/countdowntimer/countdowncircle";
 import SearchHero from "../../components/search/search";
 import Slider from "react-slick";
-
+import { useState } from "react";
+import { Reason } from "../../components/reason/reason";
+import { InputFooter } from "../../components/input/input";
 const Home = () => {
+  const settings = {
+    autoplay: true,
+    autoplaySpeed: 1000,
+    infinite: false, // Không lặp lại slider khi đến cuối
+    dots: false,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+  const settings2 = {
+    autoplay: true, // Kích hoạt chế độ tự động trượt
+    autoplaySpeed: 1000, // Tốc độ trượt tự động (ms)
+    infinite: true, //  lặp lại slider khi đến cuối
+    dots: true, //  điểm điều hướng
+    speed: 1000, // Tốc độ chuyển tiếp slide (ms)
+    slidesToShow: 1, // Số lượng slide hiển thị cùng lúc
+    slidesToScroll: 1, // Số slide cuộn mỗi lần
+    initialSlide: 0, // Bắt đầu từ slide đầu tiên
+  };
   const trendingRef = useRef(null);
   const countDownsList = [
     {
@@ -79,50 +117,6 @@ const Home = () => {
       duration: "5 Days",
     },
   ];
-  const reasons = [
-    {
-      id: 1,
-      icon: `${process.env.PUBLIC_URL}/images/icon/word.svg`,
-      title: "We make all the process easy",
-      desc: "A galley of type and scrambled it to make a type when an unknown printer took",
-    },
-    {
-      id: 2,
-      icon: `${process.env.PUBLIC_URL}/images/icon/vali.svg`,
-      title: "Private & Customized Tours",
-      desc: "A galley of type and scrambled it to make a type when an unknown printer took",
-    },
-    {
-      id: 3,
-      icon: `${process.env.PUBLIC_URL}/images/icon/book.svg`,
-      title: "Immigration & Passport Help",
-      desc: "A galley of type and scrambled it to make a type when an unknown printer took",
-    },
-  ];
-  const settings = {
-    dots: false,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 3,
-    initialSlide: 0,
-    responsive: [
-      {
-        breakpoint: 1200,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
   const trending = [
     {
       id: 1,
@@ -157,6 +151,51 @@ const Home = () => {
       price: "$895.50",
     },
   ];
+  const destinations = [
+    {
+      id: 1,
+      img: `${process.env.PUBLIC_URL}/images/destination/image1.jpg`,
+      reviews: 3.5,
+      name: "Co to",
+      desc: "Wore fall",
+    },
+    {
+      id: 2,
+      img: `${process.env.PUBLIC_URL}/images/destination/image2.jpg`,
+      reviews: 4.5,
+      name: "Cat Ba",
+      desc: "Wore fall",
+    },
+    {
+      id: 3,
+      img: `${process.env.PUBLIC_URL}/images/destination/image3.jpg`,
+      reviews: 3.5,
+      name: "Vinh Ha Long",
+      desc: "Wore fall",
+    },
+    {
+      id: 4,
+      img: `${process.env.PUBLIC_URL}/images/destination/image4.jpg`,
+      reviews: 3.5,
+      name: "Nha Trang",
+      desc: "Wore fall",
+    },
+    {
+      id: 5,
+      img: `${process.env.PUBLIC_URL}/images/destination/image5.jpg`,
+      reviews: 3.5,
+      name: "Phu Quoc",
+      desc: "Wore fall",
+    },
+
+    {
+      id: 6,
+      img: `${process.env.PUBLIC_URL}/images/destination/image6.jpg`,
+      reviews: 3.5,
+      name: "Ha Giang",
+      desc: "Wore fall",
+    },
+  ];
   const handleNext = () => {
     if (trendingRef.current) {
       trendingRef.current.slickNext();
@@ -167,6 +206,92 @@ const Home = () => {
       trendingRef.current.slickPrev();
     }
   };
+  const [isActive, setIsActive] = useState(null);
+  const handleMouseEnter = (id) => {
+    setIsActive(id);
+  };
+  const handleMouseLeave = () => {
+    setIsActive(null);
+  };
+  const types = [
+    {
+      id: 1,
+      icon: `${process.env.PUBLIC_URL}/images/icon/cityTour.svg`,
+      title: "City Tours",
+      tours: 5,
+      price: "550$",
+    },
+    {
+      id: 2,
+      icon: `${process.env.PUBLIC_URL}/images/icon/beach.svg`,
+      title: "Beaches",
+      tours: 10,
+      price: "250$",
+    },
+    {
+      id: 3,
+      icon: `${process.env.PUBLIC_URL}/images/icon/museum.svg`,
+      title: "Museum Tours",
+      tours: 5,
+      price: "399$",
+    },
+    {
+      id: 4,
+      icon: `${process.env.PUBLIC_URL}/images/icon/ship.svg`,
+      title: "Cruises",
+      tours: 8,
+      price: "850$",
+    },
+  ];
+  const feedbacks = [
+    {
+      id: 1,
+      quote: `“Adding live social proof was the #1 driver of increased revenue in all my experiments while at Airkey.” and the
+bran must survive atleast 1 year.`,
+      avatar: `${process.env.PUBLIC_URL}/images/feedback/image1.jpg`,
+      name: `Truong Tuan Anh`,
+      desc: `UI Designer`,
+    },
+    {
+      id: 2,
+      quote: `“Adding live social proof was the #1 driver of increased revenue in all my experiments while at Airkey.” and the
+bran must survive atleast 1 year.`,
+      avatar: `${process.env.PUBLIC_URL}/images/feedback/image2.jpg`,
+      name: `Nguyen Thi Hoa`,
+      desc: `Page Website`,
+    },
+    {
+      id: 3,
+      quote: `“Adding live social proof was the #1 driver of increased revenue in all my experiments while at Airkey.” and the
+bran must survive atleast 1 year.`,
+      avatar: `${process.env.PUBLIC_URL}/images/feedback/image1.jpg`,
+      name: `Bo Bo`,
+      desc: `bo bo hoc web`,
+    },
+  ];
+  const articles = [
+    {
+      id: 1,
+      img: `${process.env.PUBLIC_URL}/images/article/image4.jpg`,
+      title: `Mountains is always right destination.`,
+      desc: `Farther so friends am to detract forbade`,
+      date: `Jun 1, 2021`,
+    },
+    {
+      id: 2,
+      img: `${process.env.PUBLIC_URL}/images/article/image5.jpg`,
+      title: `Here Our's Life is either a daring adventure.`,
+      desc: `One of the programs is Save Our I have personally.`,
+      date: `Jun 1, 2021`,
+    },
+    {
+      id: 3,
+      img: `${process.env.PUBLIC_URL}/images/article/image6.jpg`,
+      title: `Here Our's Life is either a daring adventure.`,
+      desc: `life is either a daring adventure or it's nothing`,
+      date: `Jun 1, 2021`,
+    },
+  ];
   return (
     <div className="container">
       <div className="hero">
@@ -309,43 +434,7 @@ const Home = () => {
           </Slider>
         </div>
       </div>
-      <div className="reason">
-        <div className="row">
-          <div className="col-5 d-md-none">
-            <figure className="reason__img-wrap">
-              <img
-                src={`${process.env.PUBLIC_URL}/images/reason/image.jpg`}
-                className="reason__img"
-                alt="VietNamTour"
-              />
-            </figure>
-          </div>
-          <div className="col-5 offset-2 offset-xl-1  offset-md-0 col-md-12">
-            <div className="reason__content">
-              <h2 className="reason__heading">Why Choose Us?</h2>
-              <p className="reason__desc">
-                We make all the process easy. Dummy text ever since the is, when
-                an unknown printer took.
-              </p>
-              <div className="reason__list">
-                {reasons.map((reason) => {
-                  return (
-                    <div key={reason.id} className="reason__item">
-                      <figure className="reason__icon">
-                        <img src={reason.icon} alt={reason.title} />
-                      </figure>
-                      <div className="reason__item-content">
-                        <h3 className="reason__title">{reason.title}</h3>
-                        <p className="reason__item--desc">{reason.desc}</p>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Reason></Reason>
       <div className="trending">
         <div className="trending__top">
           <div className="trending__left">
@@ -421,6 +510,186 @@ const Home = () => {
           </Slider>
         </div>
       </div>
+      <div className="destination">
+        <div className="destination__top">
+          <div className="destination__left">
+            <h1 className="destination__heading">Top Destination</h1>
+            <p className="destination__desc">
+              Sost Brilliant reasons Entrada should be your one-stop-shop!
+            </p>
+          </div>
+          <div className="destination__right">
+            <Link href="" className="destination__link btn">
+              See all destination
+            </Link>
+          </div>
+        </div>
+        <div className="destination__bottom">
+          <div className="destination__container">
+            {destinations.map((destination) => {
+              return (
+                <section
+                  onMouseEnter={() => handleMouseEnter(destination.id)}
+                  onMouseLeave={handleMouseLeave}
+                  key={destination.id}
+                  className={`destination__image destination__image${destination.id}`}
+                >
+                  <img
+                    src={destination.img}
+                    alt={destination.name}
+                    className="destination__img"
+                  />
+                  <div className="destination__star">
+                    <span className="destination__star--number">
+                      {destination.reviews}
+                    </span>
+                  </div>
+                  <div className="destination__content">
+                    <p className="destination__name-place">
+                      {destination.name}
+                    </p>
+                    <p className="destination__place--desc">
+                      {destination.desc}
+                    </p>
+                  </div>
+
+                  {isActive === destination.id && (
+                    <div className="destination__overlay"></div>
+                  )}
+                  {isActive === destination.id && (
+                    <button className="btn destination__more">More</button>
+                  )}
+                </section>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+      <div className="type">
+        <h1 className="type__heading">Tour Type</h1>
+        <div className="type__list row row-cols-4">
+          {types.map((type) => {
+            return (
+              <div className="col" key={type.id}>
+                <div className="type__item">
+                  <img src={type.icon} alt={type.title} />
+                  <p className="type__title">{type.title}</p>
+                  <p className="type__desc">
+                    <span>{type.tours}</span> Tours- From
+                    <span className="type__price"> {type.price}</span>
+                  </p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+      <div className="feedback">
+        <div className="row">
+          <div className="col-5">
+            <figure className="feedback__image">
+              <img
+                src={`${process.env.PUBLIC_URL}/images/feedback/girl.svg`}
+                alt="girl"
+              />
+              <img
+                src={`${process.env.PUBLIC_URL}/images/feedback/decor.svg`}
+                alt=""
+                className="feedback__decor"
+              />
+            </figure>
+          </div>
+          <div className="col-5 offset-1">
+            <div className="feedback__content">
+              <h1 className="feedback__heading">What our user say</h1>
+              <div className="slider-container">
+                <Slider {...settings2}>
+                  {feedbacks.map((feedback) => {
+                    return (
+                      <div className="feedback__item" key={feedback.id}>
+                        <p className="feedback__quote">{feedback.quote}</p>
+                        <div className="feedback__user">
+                          <figure className="feedback__avatar">
+                            <img src={feedback.avatar} alt={feedback.name} />
+                          </figure>
+                          <div className="feedback__info">
+                            <p className="feedback__name">{feedback.name}</p>
+                            <p className="feedback__desc">{feedback.desc}</p>
+                            <div className="feedback__rating">
+                              <img
+                                src={`${process.env.PUBLIC_URL}/images/icon/rating.svg`}
+                                alt="rating"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </Slider>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="article">
+        <div className="article__top">
+          <h1 className="article__heading">Articles & Travel Guidings</h1>
+          <p className="article__desc">
+            Travel has helped us to understand the meaning of life and it has
+            helped us become better people. Each time we travel, we see the
+            world with new eyes.
+          </p>
+        </div>
+        <div className="article__separate"></div>
+        <div className="article__content">
+          <div className="row">
+            <div className="col-6">
+              <div className="article__left">
+                <figure className="article__image">
+                  <img
+                    src={`${process.env.PUBLIC_URL}/images/article/image4.jpg`}
+                    alt=""
+                  />
+                </figure>
+                <section className="article__title">
+                  <h4 className="article__title--heading">
+                    The real voyage does not consist in seeking new
+                  </h4>
+                  <p className="article__date">Jun 1, 2021</p>
+                </section>
+                <p className="article__left--desc">
+                  Excited him now natural saw passage offices you minuter. At by
+                  asked being court hopes.
+                </p>
+              </div>
+            </div>
+            <div className="col-5 offset-1">
+              <div className="article__list">
+                {articles.map((item) => {
+                  return (
+                    <div className="article__item" key={item.id}>
+                      <div className="article__item--image">
+                        <img
+                          src={item.img}
+                          className="article__image"
+                          alt="article__image"
+                        />
+                      </div>
+                      <section className="article__item--content">
+                        <h5 className="article__item--title">{item.title}</h5>
+                        <p className="article__item--desc">{item.desc}</p>
+                        <p className="article__item--date">{item.date}</p>
+                      </section>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <InputFooter></InputFooter>
     </div>
   );
 };

@@ -77,3 +77,6 @@ strong {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+.slick-dots li.slick-active button:before {
+  color: #ff7b29;
+}

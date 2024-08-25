@@ -2,7 +2,6 @@ import { NavLink } from "react-router-dom";
 import { useState } from "react";
 
 const activeClass = (params) => {
-  console.log(params.isActive); // Kiểm tra giá trị isActive
   return params.isActive ? "active-item" : "";
 };
 

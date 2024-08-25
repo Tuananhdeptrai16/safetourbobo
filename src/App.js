@@ -18,14 +18,12 @@ function App() {
       "/safetourbobo/blog",
       "/safetourbobo/contact",
     ];
-    console.log(location.pathname);
     if (validPaths.includes(location.pathname)) {
       setShowHeaderFooter(true);
     } else {
       setShowHeaderFooter(false);
     }
   }, [location]);
-  console.log(showHeaderFooter);
   return (
     <div>
       {showHeaderFooter && <Header />}
