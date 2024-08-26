@@ -3,10 +3,35 @@ import { Link } from "react-router-dom";
 import { TimerCircle } from "../../components/countdowntimer/countdowncircle";
 import SearchHero from "../../components/search/search";
 import Slider from "react-slick";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Reason } from "../../components/reason/reason";
 import { InputFooter } from "../../components/input/input";
 const Home = () => {
+  const [products, setProducts] = useState([]);
+
+  const [trending, setTrending] = useState([]);
+
+  const [destinations, setDestinations] = useState([]);
+
+  const [types, setTypes] = useState([]);
+
+  const [feedbacks, setFeedbacks] = useState([]);
+
+  const [articles, setArticles] = useState([]);
+
+  useEffect(() => {
+    fetch(`${process.env.PUBLIC_URL}/api/db.json`)
+      .then((response) => response.json())
+      .then((data) => {
+        setProducts(data.product || []);
+        setTrending(data.trending || []);
+        setDestinations(data.destinations || []);
+        setTypes(data.types || []);
+        setFeedbacks(data.feedbacks || []);
+        setArticles(data.articles || []);
+      })
+      .catch((error) => console.error("Error fetching data:", error));
+  }, []);
   const settings = {
     autoplay: true,
     autoplaySpeed: 1000,
@@ -61,141 +86,6 @@ const Home = () => {
       desc: "Property Build",
     },
   ];
-  const products = [
-    {
-      id: 1,
-      img: `${process.env.PUBLIC_URL}/images/product/item1.jpg`,
-      price: `$150/day`,
-      title: "Nha Trang",
-      location: "Nha Trang, VietNam",
-      time: "Oct 28, 2021",
-      duration: "5 Days",
-    },
-    {
-      id: 2,
-      img: `${process.env.PUBLIC_URL}/images/product/item2.jpg`,
-      price: `$110/day`,
-      title: "Co To",
-      location: "Dao CoTo, VietNam",
-      time: "Jul 30,2021",
-      duration: "5 Days",
-    },
-    {
-      id: 3,
-      img: `${process.env.PUBLIC_URL}/images/product/item3.jpg`,
-      price: `$136/day`,
-      title: "Ha Long Bay",
-      location: "Quang Ninh, VietNam",
-      time: "Jul 29, 2021",
-      duration: "5 Days",
-    },
-    {
-      id: 4,
-      img: `${process.env.PUBLIC_URL}/images/product/item4.jpg`,
-      price: `$136/day`,
-      title: "Cat Ba island",
-      location: "Quang Ninh, Viet Nam",
-      time: "Jul 29, 2021",
-      duration: "5 Days",
-    },
-    {
-      id: 5,
-      img: `${process.env.PUBLIC_URL}/images/product/item5.jpg`,
-      price: `$136/day`,
-      title: "Ha Giang",
-      location: "Ha Giang , Viet Nam",
-      time: "Jul 29, 2021",
-      duration: "5 Days",
-    },
-    {
-      id: 6,
-      img: `${process.env.PUBLIC_URL}/images/product/item6.jpg`,
-      price: `$136/day`,
-      title: "Moc Chau",
-      location: "Son La, Viet Nam",
-      time: "Jul 29, 2021",
-      duration: "5 Days",
-    },
-  ];
-  const trending = [
-    {
-      id: 1,
-      img: `${process.env.PUBLIC_URL}/images/trending/item1.jpg`,
-      title: "Mountain Hiking Tour",
-      place: "12 Places",
-      totalActivities: "3 Activites",
-      price: "$895.50",
-    },
-    {
-      id: 2,
-      img: `${process.env.PUBLIC_URL}/images/trending/item2.jpg`,
-      title: "Tran Skyline",
-      place: "12 Places",
-      totalActivities: "3 Activites",
-      price: "$769.99",
-    },
-    {
-      id: 3,
-      img: `${process.env.PUBLIC_URL}/images/trending/item3.jpg`,
-      title: "Forest Wild Life",
-      place: "12 Places",
-      totalActivities: "3 Activites",
-      price: "$939.80",
-    },
-    {
-      id: 4,
-      img: `${process.env.PUBLIC_URL}/images/trending/item2.png`,
-      title: "Mountain Hiking Tour",
-      place: "12 Places",
-      totalActivities: "3 Activites",
-      price: "$895.50",
-    },
-  ];
-  const destinations = [
-    {
-      id: 1,
-      img: `${process.env.PUBLIC_URL}/images/destination/image1.jpg`,
-      reviews: 3.5,
-      name: "Co to",
-      desc: "Wore fall",
-    },
-    {
-      id: 2,
-      img: `${process.env.PUBLIC_URL}/images/destination/image2.jpg`,
-      reviews: 4.5,
-      name: "Cat Ba",
-      desc: "Wore fall",
-    },
-    {
-      id: 3,
-      img: `${process.env.PUBLIC_URL}/images/destination/image3.jpg`,
-      reviews: 3.5,
-      name: "Vinh Ha Long",
-      desc: "Wore fall",
-    },
-    {
-      id: 4,
-      img: `${process.env.PUBLIC_URL}/images/destination/image4.jpg`,
-      reviews: 3.5,
-      name: "Nha Trang",
-      desc: "Wore fall",
-    },
-    {
-      id: 5,
-      img: `${process.env.PUBLIC_URL}/images/destination/image5.jpg`,
-      reviews: 3.5,
-      name: "Phu Quoc",
-      desc: "Wore fall",
-    },
-
-    {
-      id: 6,
-      img: `${process.env.PUBLIC_URL}/images/destination/image6.jpg`,
-      reviews: 3.5,
-      name: "Ha Giang",
-      desc: "Wore fall",
-    },
-  ];
   const handleNext = () => {
     if (trendingRef.current) {
       trendingRef.current.slickNext();
@@ -213,85 +103,7 @@ const Home = () => {
   const handleMouseLeave = () => {
     setIsActive(null);
   };
-  const types = [
-    {
-      id: 1,
-      icon: `${process.env.PUBLIC_URL}/images/icon/cityTour.svg`,
-      title: "City Tours",
-      tours: 5,
-      price: "550$",
-    },
-    {
-      id: 2,
-      icon: `${process.env.PUBLIC_URL}/images/icon/beach.svg`,
-      title: "Beaches",
-      tours: 10,
-      price: "250$",
-    },
-    {
-      id: 3,
-      icon: `${process.env.PUBLIC_URL}/images/icon/museum.svg`,
-      title: "Museum Tours",
-      tours: 5,
-      price: "399$",
-    },
-    {
-      id: 4,
-      icon: `${process.env.PUBLIC_URL}/images/icon/ship.svg`,
-      title: "Cruises",
-      tours: 8,
-      price: "850$",
-    },
-  ];
-  const feedbacks = [
-    {
-      id: 1,
-      quote: `“Adding live social proof was the #1 driver of increased revenue in all my experiments while at Airkey.” and the
-bran must survive atleast 1 year.`,
-      avatar: `${process.env.PUBLIC_URL}/images/feedback/image1.jpg`,
-      name: `Truong Tuan Anh`,
-      desc: `UI Designer`,
-    },
-    {
-      id: 2,
-      quote: `“Adding live social proof was the #1 driver of increased revenue in all my experiments while at Airkey.” and the
-bran must survive atleast 1 year.`,
-      avatar: `${process.env.PUBLIC_URL}/images/feedback/image2.jpg`,
-      name: `Nguyen Thi Hoa`,
-      desc: `Page Website`,
-    },
-    {
-      id: 3,
-      quote: `“Adding live social proof was the #1 driver of increased revenue in all my experiments while at Airkey.” and the
-bran must survive atleast 1 year.`,
-      avatar: `${process.env.PUBLIC_URL}/images/feedback/image1.jpg`,
-      name: `Bo Bo`,
-      desc: `bo bo hoc web`,
-    },
-  ];
-  const articles = [
-    {
-      id: 1,
-      img: `${process.env.PUBLIC_URL}/images/article/image4.jpg`,
-      title: `Mountains is always right destination.`,
-      desc: `Farther so friends am to detract forbade`,
-      date: `Jun 1, 2021`,
-    },
-    {
-      id: 2,
-      img: `${process.env.PUBLIC_URL}/images/article/image5.jpg`,
-      title: `Here Our's Life is either a daring adventure.`,
-      desc: `One of the programs is Save Our I have personally.`,
-      date: `Jun 1, 2021`,
-    },
-    {
-      id: 3,
-      img: `${process.env.PUBLIC_URL}/images/article/image6.jpg`,
-      title: `Here Our's Life is either a daring adventure.`,
-      desc: `life is either a daring adventure or it's nothing`,
-      date: `Jun 1, 2021`,
-    },
-  ];
+
   return (
     <div className="container">
       <div className="hero">
@@ -393,7 +205,7 @@ bran must survive atleast 1 year.`,
                   <div className="product__images">
                     <div>
                       <img
-                        src={item.img}
+                        src={`${process.env.PUBLIC_URL}${item.img}`}
                         className="product__image"
                         alt={item.title}
                       />
@@ -483,7 +295,10 @@ bran must survive atleast 1 year.`,
                 <div key={item.id} className="trending__item">
                   <div className="trending__item--content">
                     <figure className="trending__images">
-                      <img src={item.img} alt={item.title} />
+                      <img
+                        src={`${process.env.PUBLIC_URL}${item.img}`}
+                        alt={item.title}
+                      />
                     </figure>
                     <h4 className="trending__title">{item.title}</h4>
                     <div className="trending__active">
@@ -535,7 +350,7 @@ bran must survive atleast 1 year.`,
                   className={`destination__image destination__image${destination.id}`}
                 >
                   <img
-                    src={destination.img}
+                    src={`${process.env.PUBLIC_URL}${destination.img}`}
                     alt={destination.name}
                     className="destination__img"
                   />
@@ -567,12 +382,15 @@ bran must survive atleast 1 year.`,
       </div>
       <div className="type">
         <h1 className="type__heading">Tour Type</h1>
-        <div className="type__list row row-cols-4">
+        <div className="type__list gy-3 row row-cols-4 row-cols-lg-2 row-cols-md-1 gy-md-2">
           {types.map((type) => {
             return (
               <div className="col" key={type.id}>
                 <div className="type__item">
-                  <img src={type.icon} alt={type.title} />
+                  <img
+                    src={`${process.env.PUBLIC_URL}${type.icon}`}
+                    alt={type.title}
+                  />
                   <p className="type__title">{type.title}</p>
                   <p className="type__desc">
                     <span>{type.tours}</span> Tours- From
@@ -586,7 +404,7 @@ bran must survive atleast 1 year.`,
       </div>
       <div className="feedback">
         <div className="row">
-          <div className="col-5">
+          <div className="col-5 col-lg-12">
             <figure className="feedback__image">
               <img
                 src={`${process.env.PUBLIC_URL}/images/feedback/girl.svg`}
@@ -599,7 +417,7 @@ bran must survive atleast 1 year.`,
               />
             </figure>
           </div>
-          <div className="col-5 offset-1">
+          <div className="col-5 col-lg-12 offset-1 gy-lg-6">
             <div className="feedback__content">
               <h1 className="feedback__heading">What our user say</h1>
               <div className="slider-container">
@@ -610,7 +428,10 @@ bran must survive atleast 1 year.`,
                         <p className="feedback__quote">{feedback.quote}</p>
                         <div className="feedback__user">
                           <figure className="feedback__avatar">
-                            <img src={feedback.avatar} alt={feedback.name} />
+                            <img
+                              src={`${process.env.PUBLIC_URL}${feedback.avatar}`}
+                              alt={feedback.name}
+                            />
                           </figure>
                           <div className="feedback__info">
                             <p className="feedback__name">{feedback.name}</p>
@@ -644,7 +465,7 @@ bran must survive atleast 1 year.`,
         <div className="article__separate"></div>
         <div className="article__content">
           <div className="row">
-            <div className="col-6">
+            <div className="col-6 col-lg-12">
               <div className="article__left">
                 <figure className="article__image">
                   <img
@@ -653,25 +474,27 @@ bran must survive atleast 1 year.`,
                   />
                 </figure>
                 <section className="article__title">
-                  <h4 className="article__title--heading">
-                    The real voyage does not consist in seeking new
-                  </h4>
+                  <div className="article__title--left">
+                    <h4 className="article__title--heading">
+                      The real voyage does not consist in seeking new
+                    </h4>
+                    <p className="article__left--desc">
+                      Excited him now natural saw passage offices you minuter.
+                      At by asked being court hopes.
+                    </p>
+                  </div>
                   <p className="article__date">Jun 1, 2021</p>
                 </section>
-                <p className="article__left--desc">
-                  Excited him now natural saw passage offices you minuter. At by
-                  asked being court hopes.
-                </p>
               </div>
             </div>
-            <div className="col-5 offset-1">
+            <div className="col-5  col-lg-12  offset-xl-0 offset-1 offset-lg-0 gy-lg-6">
               <div className="article__list">
                 {articles.map((item) => {
                   return (
                     <div className="article__item" key={item.id}>
                       <div className="article__item--image">
                         <img
-                          src={item.img}
+                          src={`${process.env.PUBLIC_URL}${item.img}`}
                           className="article__image"
                           alt="article__image"
                         />

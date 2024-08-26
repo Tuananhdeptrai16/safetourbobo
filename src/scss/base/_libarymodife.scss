@@ -1,0 +1,32 @@
+.active-item {
+  color: #2d3134;
+  font-weight: 550;
+  &::after {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 2px;
+    border-radius: 1px;
+    background: #ff7b29;
+  }
+}
+.timer__desc {
+  color: #a5a8b4;
+  font-family: "Inter 18pt";
+  font-size: 0.6rem;
+  font-weight: 500;
+}
+.timer__number {
+  color: #0d1e3f;
+  font-family: "Inter 18pt";
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 122.222%;
+}
+//// library slick
+.slick-slide {
+  padding: 0 10px; /* Khoảng cách giữa các item */
+}
+.slider-container {
+  margin-top: 30px;
+}

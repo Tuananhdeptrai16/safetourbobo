@@ -1,0 +1,76 @@
+@use "../abstracts";
+.footer {
+  margin-top: 110px;
+  padding: 30px;
+  &__title {
+    color: #020000;
+    font-family: "Inter 18pt";
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 100%;
+  }
+  &__wrap {
+    margin-top: 23px;
+  }
+  &__link {
+    color: #676a6c;
+    font-family: "Inter 18pt";
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 316.667%;
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+      color: rgb(30, 67, 67);
+    }
+  }
+  &__touch {
+    width: 200px;
+    color: #676a6c;
+    font-family: "Inter 18pt";
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 185.714%;
+  }
+  &__email {
+    color: #31c3e0;
+    font-family: "Inter 18pt";
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 100%;
+  }
+  &__separate {
+    margin-top: 40px;
+    width: 100%;
+    height: 1px;
+    background: rgba(210, 208, 192, 0.21);
+  }
+  &__nav {
+    margin-top: 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include abstracts.breakpoint(md) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+    }
+  }
+  &__social {
+    display: flex;
+    gap: 20px;
+  }
+  &__icon-wrap {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    transition: all 0.2s ease;
+    &:hover {
+      background: #ff7b29;
+    }
+  }
+}

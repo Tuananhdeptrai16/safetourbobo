@@ -268,19 +268,6 @@
     margin-top: 16px;
   }
 }
-.timer__desc {
-  color: #a5a8b4;
-  font-family: "Inter 18pt";
-  font-size: 0.6rem;
-  font-weight: 500;
-}
-.timer__number {
-  color: #0d1e3f;
-  font-family: "Inter 18pt";
-  font-size: 1.8rem;
-  font-weight: 700;
-  line-height: 122.222%;
-}
 // product
 .product {
   margin-top: 140px;
@@ -399,15 +386,15 @@
     }
   }
 }
-.slick-slide {
-  padding: 0 10px; /* Khoảng cách giữa các item */
-}
-.slider-container {
-  margin-top: 30px;
-}
-
+//trending
 .trending {
   margin-top: 138px;
+  @include abstracts.breakpoint(lg) {
+    margin-top: 100px;
+  }
+  @include abstracts.breakpoint(md) {
+    margin-top: 60px;
+  }
   &__top {
     display: flex;
     justify-content: space-between;
@@ -453,13 +440,13 @@
     justify-content: center;
     width: 54px;
     height: 54px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    transition: background-color 0.3s ease;
     @include abstracts.breakpoint(md) {
       width: 41px;
       height: 41px;
     }
-    border-radius: 50%;
-    border: 1px solid #ccc;
-    transition: background-color 0.3s ease;
     &:hover {
       color: #fff;
       background-color: #ff7b29;
@@ -570,6 +557,12 @@
 }
 .destination {
   margin-top: 138px;
+  @include abstracts.breakpoint(lg) {
+    margin-top: 100px;
+  }
+  @include abstracts.breakpoint(md) {
+    margin-top: 60px;
+  }
   &__container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -579,6 +572,20 @@
     grid-template-areas:
       "destination__image1 destination__image1 destination__image1 destination__image3 destination__image3 destination__image3 destination__image3 destination__image4 destination__image4 destination__image4 destination__image4 destination__image4"
       "destination__image2 destination__image2 destination__image2 destination__image3 destination__image3 destination__image3 destination__image3 destination__image5 destination__image5 destination__image6 destination__image6 destination__image6";
+    @include abstracts.breakpoint(xl) {
+      grid-template-rows: 250px 250px 250px 250px;
+      grid-template-areas:
+        "destination__image1 destination__image1 destination__image1 destination__image1 destination__image1 destination__image3 destination__image3 destination__image3 destination__image3 destination__image3  destination__image3 destination__image3"
+        "destination__image2 destination__image2 destination__image2 destination__image2 destination__image2 destination__image3 destination__image3 destination__image3 destination__image3 destination__image3  destination__image3 destination__image3"
+        "destination__image4 destination__image4 destination__image4 destination__image4 destination__image4 destination__image4 destination__image4 destination__image4 destination__image4 destination__image4 destination__image4 destination__image4"
+        "destination__image5 destination__image5 destination__image5 destination__image5 destination__image5 destination__image5 destination__image6 destination__image6 destination__image6 destination__image6 destination__image6 destination__image6";
+    }
+    @include abstracts.breakpoint(xl) {
+      grid-template-rows: 200px 200px 200px 200px;
+    }
+    @include abstracts.breakpoint(md) {
+      grid-template-rows: 150px 125px 177px 177px;
+    }
   }
   &__image1 {
     grid-area: destination__image1;
@@ -600,12 +607,19 @@
     margin-bottom: 30px;
     grid-area: destination__image4;
     background: orange;
+    @include abstracts.breakpoint(xl) {
+      margin-top: 30px;
+      margin-left: 0;
+    }
   }
   &__image5 {
     margin-left: 30px;
     margin-right: 30px;
     grid-area: destination__image5;
     background: orange;
+    @include abstracts.breakpoint(xl) {
+      margin-left: 0;
+    }
   }
   &__image6 {
     grid-area: destination__image6;
@@ -615,12 +629,24 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @include abstracts.breakpoint(md) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 30px;
+    }
   }
   &__heading {
     color: #2d3134;
     font-size: 4rem;
     font-weight: 700;
     line-height: 125%;
+    @include abstracts.breakpoint(xl) {
+      font-size: 4rem;
+    }
+    @include abstracts.breakpoint(md) {
+      font-size: 2.4rem;
+      line-height: 133.333%;
+    }
   }
   &__desc {
     margin-top: 16px;
@@ -629,6 +655,9 @@
     font-size: 1.6rem;
     font-weight: 400;
     line-height: 162.5%;
+    @include abstracts.breakpoint(md) {
+      width: 335px;
+    }
   }
   &__link {
     width: 233px;
@@ -638,6 +667,11 @@
     align-items: center;
     justify-content: center;
     font-size: 1.8rem;
+    @include abstracts.breakpoint(xl) {
+      width: 150px;
+      height: 50px;
+      font-size: 1.4rem;
+    }
   }
   &__bottom {
     margin-top: 51px;
@@ -651,6 +685,10 @@
     border-radius: 14px;
     background: #fff;
     box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.2);
+    @include abstracts.breakpoint(md) {
+      width: 31px;
+      height: 20px;
+    }
   }
   &__star--number {
     color: #ff7b29;
@@ -658,6 +696,9 @@
     font-size: 1.4rem;
     font-weight: 600;
     line-height: 100%;
+    @include abstracts.breakpoint(md) {
+      font-size: 1rem;
+    }
   }
   &__image {
     position: relative;
@@ -680,6 +721,9 @@
     font-size: 2.4rem;
     font-weight: 700;
     line-height: 133.333%;
+    @include abstracts.breakpoint(md) {
+      font-size: 1.2rem;
+    }
   }
   &__place--desc {
     margin-top: 4px;
@@ -688,6 +732,9 @@
     font-size: 1.2rem;
     font-weight: 500;
     line-height: 150%;
+    @include abstracts.breakpoint(md) {
+      font-size: 0.6rem;
+    }
   }
   &__img {
     border-radius: 20px;
@@ -717,15 +764,27 @@
 }
 .type {
   margin-top: 140px;
+  @include abstracts.breakpoint(lg) {
+    margin-top: 100px;
+  }
+  @include abstracts.breakpoint(md) {
+    margin-top: 80px;
+  }
   &__heading {
     color: #2d3134;
     text-align: center;
     font-size: 4rem;
     font-weight: 700;
     line-height: 125%;
+    @include abstracts.breakpoint(md) {
+      font-size: 2.4rem;
+    }
   }
   &__list {
     margin-top: 60px;
+    @include abstracts.breakpoint(md) {
+      margin-top: 30px;
+    }
   }
   &__item {
     display: flex;
@@ -768,6 +827,12 @@
 }
 .feedback {
   margin-top: 160px;
+  @include abstracts.breakpoint(lg) {
+    margin-top: 100px;
+  }
+  @include abstracts.breakpoint(md) {
+    margin-top: 80px;
+  }
   &__avatar {
     & img {
       border-radius: 70px;
@@ -783,6 +848,9 @@
     font-size: 4rem;
     font-weight: 600;
     line-height: 125%;
+    @include abstracts.breakpoint(md) {
+      font-size: 2.4rem;
+    }
   }
   &__quote {
     width: 516px;
@@ -791,6 +859,9 @@
     font-style: italic;
     font-weight: 500;
     line-height: 155.556%;
+    @include abstracts.breakpoint(md) {
+      font-size: 1.4rem;
+    }
   }
   &__user {
     margin-top: 59px;
@@ -823,8 +894,7 @@
     align-items: center;
     z-index: 22;
     border-radius: 50%;
-    background: #f6e3ed;
-
+    height: 400px;
     & img {
       position: absolute;
       top: 0;
@@ -838,16 +908,21 @@
 }
 .article {
   margin-top: 140px;
+  @include abstracts.breakpoint(md) {
+    margin-top: 60px;
+  }
   &__heading {
     color: #2d3134;
     text-align: center;
     font-size: 4rem;
     font-weight: 700;
     line-height: 125%;
+    @include abstracts.breakpoint(md) {
+      font-size: 2.4rem;
+    }
   }
   &__desc {
-    margin-top: 16px;
-    margin: 0 auto;
+    margin: 16px auto 0;
     width: 733px;
     color: #676a6c;
     text-align: center;
@@ -855,9 +930,19 @@
     font-size: 1.6rem;
     font-weight: 400;
     line-height: 162.5%;
+    @include abstracts.breakpoint(lg) {
+      width: 400px;
+    }
+    @include abstracts.breakpoint(md) {
+      width: 335px;
+      font-size: 1.4rem;
+    }
   }
   &__content {
     margin-top: 60px;
+    @include abstracts.breakpoint(md) {
+      margin-top: 40px;
+    }
   }
   &__image {
     position: relative;
@@ -877,6 +962,10 @@
     margin-top: 42px;
     display: flex;
     justify-content: space-between;
+    @include abstracts.breakpoint(md) {
+      margin-top: 16px;
+      flex-direction: column;
+    }
     &--heading {
       width: 359px;
       color: #2d3134;
@@ -884,6 +973,9 @@
       font-size: 2.6rem;
       font-weight: 600;
       line-height: 146.154%;
+      @include abstracts.breakpoint(md) {
+        font-size: 2rem;
+      }
     }
   }
   &__date {
@@ -893,6 +985,9 @@
     font-size: 1.4rem;
     font-weight: 400;
     line-height: 100%;
+    @include abstracts.breakpoint(md) {
+      font-size: 1.2rem;
+    }
   }
   &__left {
     &--desc {
@@ -903,6 +998,15 @@
       font-size: 1.8rem;
       font-weight: 400;
       line-height: 144.444%;
+      @include abstracts.breakpoint(md) {
+        font-size: 1.4rem;
+        width: 335px;
+      }
+    }
+  }
+  &__list {
+    @include abstracts.breakpoint(lg) {
+      margin-top: 30px;
     }
   }
   &__item {
@@ -912,6 +1016,15 @@
       object-fit: cover;
       width: 220px;
       height: 219px;
+      @include abstracts.breakpoint(lg) {
+        width: 200px;
+        height: 200px;
+      }
+      @include abstracts.breakpoint(md) {
+        width: 120px;
+        height: 120px;
+        flex-shrink: 0;
+      }
     }
     &--title {
       width: 253px;
@@ -920,6 +1033,12 @@
       font-size: 2.2rem;
       font-weight: 600;
       line-height: 145.455%;
+      @include abstracts.breakpoint(lg) {
+        width: 100%;
+      }
+      @include abstracts.breakpoint(md) {
+        width: 250x;
+      }
     }
     &--desc {
       margin-top: 12px;
@@ -929,6 +1048,14 @@
       font-size: 1.6rem;
       font-weight: 400;
       line-height: 162.5%;
+      @include abstracts.breakpoint(lg) {
+        width: 300px;
+      }
+      @include abstracts.breakpoint(md) {
+        margin-top: 10px;
+        width: 196px;
+        font-size: 1.4rem;
+      }
     }
     &--date {
       margin-top: 51px;
@@ -937,6 +1064,10 @@
       font-size: 1.4rem;
       font-weight: 400;
       line-height: 100%;
+      @include abstracts.breakpoint(md) {
+        font-size: 1.2rem;
+        margin-top: 16px;
+      }
     }
   }
   &__item + &__item {
@@ -947,5 +1078,8 @@
     height: 1px;
     border: 2px dashed #ff7b29;
     margin: 30px auto 0;
+    @include abstracts.breakpoint(md) {
+      margin: 16px auto 0;
+    }
   }
 }

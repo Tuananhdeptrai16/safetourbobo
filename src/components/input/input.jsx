@@ -3,7 +3,7 @@ import React from "react";
 export const InputFooter = () => {
   return (
     <div className="container">
-      <div className="letter">
+      <div className="letter d-md-none">
         <img
           src={`${process.env.PUBLIC_URL}/images/icon/triangle.svg`}
           alt="triangle"
