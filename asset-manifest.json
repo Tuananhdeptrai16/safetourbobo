@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/safetourbobo/static/css/main.69e1056f.css",
+    "main.css": "/safetourbobo/static/css/main.f0e211fd.css",
     "main.js": "/safetourbobo/static/js/main.0318182c.js",
     "static/media/Inter18pt-ExtraBoldItalic.woff": "/safetourbobo/static/media/Inter18pt-ExtraBoldItalic.cd7ea00943fc40334e7d.woff",
     "static/media/Inter18pt-BoldItalic.woff": "/safetourbobo/static/media/Inter18pt-BoldItalic.14579a7c81ecd18228b7.woff",
@@ -103,11 +103,11 @@
     "static/media/slick.eot": "/safetourbobo/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/safetourbobo/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/safetourbobo/static/media/slick.295183786cd8a1389865.woff",
-    "main.69e1056f.css.map": "/safetourbobo/static/css/main.69e1056f.css.map",
+    "main.f0e211fd.css.map": "/safetourbobo/static/css/main.f0e211fd.css.map",
     "main.0318182c.js.map": "/safetourbobo/static/js/main.0318182c.js.map"
   },
   "entrypoints": [
-    "static/css/main.69e1056f.css",
+    "static/css/main.f0e211fd.css",
     "static/js/main.0318182c.js"
   ]
 }
