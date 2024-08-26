@@ -35,7 +35,7 @@ const Home = () => {
   const settings = {
     autoplay: true,
     autoplaySpeed: 1000,
-    infinite: false, // Không lặp lại slider khi đến cuối
+    infinite: true, // Không lặp lại slider khi đến cuối
     dots: false,
     speed: 500,
     slidesToShow: 3,

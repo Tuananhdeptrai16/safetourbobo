@@ -1,6 +1,7 @@
 @use "../abstracts";
 .header {
   position: relative;
+  z-index: 100;
   padding: 30px 0;
   background: #fff transparent;
   display: flex;
