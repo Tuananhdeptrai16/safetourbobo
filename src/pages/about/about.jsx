@@ -22,11 +22,17 @@ export const About = () => {
       <div className="about">
         <div className="about__slider">
           <h1 className="about__heading">About us</h1>
-          <img
-            src={`${process.env.PUBLIC_URL}/images/about/slider.png`}
-            alt=""
-            className="about__background"
-          />
+          <picture>
+            <source
+              media="(max-width:767.98px)"
+              srcset={`${process.env.PUBLIC_URL}/images/about/slider1.png`}
+            />
+            <img
+              src={`${process.env.PUBLIC_URL}/images/about/slider.png`}
+              alt=""
+              className="about__background"
+            />
+          </picture>
         </div>
       </div>
       <div className="container">
