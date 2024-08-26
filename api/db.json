@@ -209,5 +209,34 @@
       "desc": "life is either a daring adventure or it's nothing",
       "date": "Jun 1, 2021"
     }
+  ],
+  "guides": [
+    {
+      "id": 1,
+      "image": "/images/guides/image1.jpg",
+      "name": "Hasan Ahmed",
+      "desc": "Adventure master",
+      "facebook": "abcd.com",
+      "twister": "abcd.com",
+      "insta": "abcd.com"
+    },
+    {
+      "id": 2,
+      "image": "/images/guides/image2.jpg",
+      "name": "Mosqur Alam",
+      "desc": "Adventure master",
+      "facebook": "abcd.com",
+      "twister": "abcd.com",
+      "insta": "abcd.com"
+    },
+    {
+      "id": 3,
+      "image": "/images/guides/image3.jpg",
+      "name": "Foysal Khan",
+      "desc": "Adventure master",
+      "facebook": "abcd.com",
+      "twister": "abcd.com",
+      "insta": "abcd.com"
+    }
   ]
 }
