@@ -753,6 +753,11 @@
     top: 50%;
     transform: translateX(-50%);
     transform: translate(-50%, -50%);
+    @include abstracts.breakpoint(md) {
+      width: 50px;
+      height: 25px;
+      font-size: 1rem;
+    }
   }
   &__overlay {
     border-radius: 20px;
