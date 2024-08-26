@@ -1,0 +1,213 @@
+{
+  "product": [
+    {
+      "id": 1,
+      "img": "/images/product/item1.jpg",
+      "price": "$150/day",
+      "title": "Nha Trang",
+      "location": "Nha Trang, VietNam",
+      "time": "Oct 28, 2021",
+      "duration": "5 Days"
+    },
+    {
+      "id": 2,
+      "img": "/images/product/item2.jpg",
+      "price": "$110/day",
+      "title": "Co To",
+      "location": "Dao CoTo, VietNam",
+      "time": "Jul 30,2021",
+      "duration": "5 Days"
+    },
+    {
+      "id": 3,
+      "img": "/images/product/item3.jpg",
+      "price": "$136/day",
+      "title": "Ha Long Bay",
+      "location": "Quang Ninh, VietNam",
+      "time": "Jul 29, 2021",
+      "duration": "5 Days"
+    },
+    {
+      "id": 4,
+      "img": "/images/product/item4.jpg",
+      "price": "$136/day",
+      "title": "Cat Ba island",
+      "location": "Quang Ninh, Viet Nam",
+      "time": "Jul 29, 2021",
+      "duration": "5 Days"
+    },
+    {
+      "id": 5,
+      "img": "/images/product/item5.jpg",
+      "price": "$136/day",
+      "title": "Ha Giang",
+      "location": "Ha Giang , Viet Nam",
+      "time": "Jul 29, 2021",
+      "duration": "5 Days"
+    },
+    {
+      "id": 6,
+      "img": "/images/product/item6.jpg",
+      "price": "$136/day",
+      "title": "Moc Chau",
+      "location": "Son La, Viet Nam",
+      "time": "Jul 29, 2021",
+      "duration": "5 Days"
+    }
+  ],
+  "trending": [
+    {
+      "id": 1,
+      "img": "/images/trending/item1.jpg",
+      "title": "Mountain Hiking Tour",
+      "place": "12 Places",
+      "totalActivities": "3 Activites",
+      "price": "$895.50"
+    },
+    {
+      "id": 2,
+      "img": "/images/trending/item2.jpg",
+      "title": "Tran Skyline",
+      "place": "12 Places",
+      "totalActivities": "3 Activites",
+      "price": "$769.99"
+    },
+    {
+      "id": 3,
+      "img": "/images/trending/item3.jpg",
+      "title": "Forest Wild Life",
+      "place": "12 Places",
+      "totalActivities": "3 Activites",
+      "price": "$939.80"
+    },
+    {
+      "id": 4,
+      "img": "/images/trending/item2.png",
+      "title": "Mountain Hiking Tour",
+      "place": "12 Places",
+      "totalActivities": "3 Activites",
+      "price": "$895.50"
+    }
+  ],
+  "destinations": [
+    {
+      "id": 1,
+      "img": "/images/destination/image1.jpg",
+      "reviews": 3.5,
+      "name": "Co to",
+      "desc": "Wore fall"
+    },
+    {
+      "id": 2,
+      "img": "/images/destination/image2.jpg",
+      "reviews": 4.5,
+      "name": "Cat Ba",
+      "desc": "Wore fall"
+    },
+    {
+      "id": 3,
+      "img": "/images/destination/image3.jpg",
+      "reviews": 3.5,
+      "name": "Vinh Ha Long",
+      "desc": "Wore fall"
+    },
+    {
+      "id": 4,
+      "img": "/images/destination/image4.jpg",
+      "reviews": 3.5,
+      "name": "Nha Trang",
+      "desc": "Wore fall"
+    },
+    {
+      "id": 5,
+      "img": "/images/destination/image5.jpg",
+      "reviews": 3.5,
+      "name": "Phu Quoc",
+      "desc": "Wore fall"
+    },
+
+    {
+      "id": 6,
+      "img": "/images/destination/image6.jpg",
+      "reviews": 3.5,
+      "name": "Ha Giang",
+      "desc": "Wore fall"
+    }
+  ],
+  "types": [
+    {
+      "id": 1,
+      "icon": "/images/icon/cityTour.svg",
+      "title": "City Tours",
+      "tours": 5,
+      "price": "550$"
+    },
+    {
+      "id": 2,
+      "icon": "/images/icon/beach.svg",
+      "title": "Beaches",
+      "tours": 10,
+      "price": "250$"
+    },
+    {
+      "id": 3,
+      "icon": "/images/icon/museum.svg",
+      "title": "Museum Tours",
+      "tours": 5,
+      "price": "399$"
+    },
+    {
+      "id": 4,
+      "icon": "/images/icon/ship.svg",
+      "title": "Cruises",
+      "tours": 8,
+      "price": "850$"
+    }
+  ],
+  "feedbacks": [
+    {
+      "id": 1,
+      "quote": "“Adding live social proof was the #1 driver of increased revenue in all my experiments while at Airkey.” and the brand must survive at least 1 year.",
+      "avatar": "/images/feedback/image1.jpg",
+      "name": "Truong Tuan Anh",
+      "desc": "UI Designer"
+    },
+    {
+      "id": 2,
+      "quote": "“Adding live social proof was the #1 driver of increased revenue in all my experiments while at Airkey.” and the brand must survive at least 1 year.",
+      "avatar": "/images/feedback/image2.jpg",
+      "name": "Nguyen Thi Hoa",
+      "desc": "Page Website"
+    },
+    {
+      "id": 3,
+      "quote": "“Adding live social proof was the #1 driver of increased revenue in all my experiments while at Airkey.” and the brand must survive at least 1 year.",
+      "avatar": "/images/feedback/image1.jpg",
+      "name": "Bo Bo",
+      "desc": "bo bo hoc web"
+    }
+  ],
+  "articles": [
+    {
+      "id": 1,
+      "img": "/images/article/image4.jpg",
+      "title": "Mountains is always right destination.",
+      "desc": "Farther so friends am to detract forbade",
+      "date": "Jun 1, 2021"
+    },
+    {
+      "id": 2,
+      "img": "/images/article/image5.jpg",
+      "title": "Here Our's Life is either a daring adventure.",
+      "desc": "One of the programs is Save Our I have personally.",
+      "date": "Jun 1, 2021"
+    },
+    {
+      "id": 3,
+      "img": "/images/article/image6.jpg",
+      "title": "Here Our's Life is either a daring adventure.",
+      "desc": "life is either a daring adventure or it's nothing",
+      "date": "Jun 1, 2021"
+    }
+  ]
+}
