@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/safetourbobo/static/css/main.d7650f7d.css",
-    "main.js": "/safetourbobo/static/js/main.9939decb.js",
+    "main.css": "/safetourbobo/static/css/main.06d47c73.css",
+    "main.js": "/safetourbobo/static/js/main.c738b155.js",
     "static/media/Inter18pt-ExtraBoldItalic.woff": "/safetourbobo/static/media/Inter18pt-ExtraBoldItalic.cd7ea00943fc40334e7d.woff",
     "static/media/Inter18pt-BoldItalic.woff": "/safetourbobo/static/media/Inter18pt-BoldItalic.14579a7c81ecd18228b7.woff",
     "static/media/Inter24pt-ExtraBoldItalic.woff": "/safetourbobo/static/media/Inter24pt-ExtraBoldItalic.5961f4fa023addee38bd.woff",
@@ -103,11 +103,11 @@
     "static/media/slick.eot": "/safetourbobo/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/safetourbobo/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/safetourbobo/static/media/slick.295183786cd8a1389865.woff",
-    "main.d7650f7d.css.map": "/safetourbobo/static/css/main.d7650f7d.css.map",
-    "main.9939decb.js.map": "/safetourbobo/static/js/main.9939decb.js.map"
+    "main.06d47c73.css.map": "/safetourbobo/static/css/main.06d47c73.css.map",
+    "main.c738b155.js.map": "/safetourbobo/static/js/main.c738b155.js.map"
   },
   "entrypoints": [
-    "static/css/main.d7650f7d.css",
-    "static/js/main.9939decb.js"
+    "static/css/main.06d47c73.css",
+    "static/js/main.c738b155.js"
   ]
 }
