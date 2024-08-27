@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
-import PageNumber from "../../components/pagination/pagination";
+import PageNumber from "../../../components/pagination/pagination";
 
-export const Destination = () => {
+export const Page2 = () => {
   const [destinations, setDestinations] = useState([]);
   useEffect(() => {
     fetch(`${process.env.PUBLIC_URL}/api/db.json`)
       .then((response) => response.json())
       .then((data) => {
-        setDestinations(data.destination.page1 || []);
+        setDestinations(data.destination.page2 || []);
       });
   }, []);
   return (
@@ -17,7 +17,7 @@ export const Destination = () => {
           <h1 className="destination__heading">Destinations</h1>
           <p className="destination__desc">Explore Tours By Destinations</p>
         </div>
-        <picture className="destination__background">
+        <picture>
           <source
             media="(max-width:767.98px)"
             srcSet={`${process.env.PUBLIC_URL}/images/destination/slider1.png`}
@@ -25,7 +25,7 @@ export const Destination = () => {
           <img
             src={`${process.env.PUBLIC_URL}/images/destination/slider.png`}
             alt=""
-            className="destination__slider"
+            className="destination__background"
           />
         </picture>
       </div>

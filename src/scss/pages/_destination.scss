@@ -1,0 +1,120 @@
+@use "../abstracts";
+.destination {
+  &__background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    object-fit: cover;
+    z-index: 0;
+    @include abstracts.breakpoint(lg) {
+      height: 500px;
+    }
+    @include abstracts.breakpoint(md) {
+      height: 240px;
+    }
+  }
+  &__slider {
+    width: 100%;
+    height: 100%;
+  }
+  &__cover {
+    height: 520px;
+    @include abstracts.breakpoint(xl) {
+      height: 420px;
+    }
+    @include abstracts.breakpoint(md) {
+      height: 132px;
+    }
+  }
+  &__heading-cover {
+    width: 100%;
+    height: calc(100% - 108px);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+  }
+  &__heading {
+    color: #ff7b29;
+    font-size: 13.6rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110.294%;
+    @include abstracts.breakpoint(xl) {
+      font-size: 8rem;
+    }
+    @include abstracts.breakpoint(lg) {
+      font-size: 6rem;
+    }
+    @include abstracts.breakpoint(md) {
+      margin-top: 30px;
+      font-size: 3rem;
+    }
+  }
+  &__desc {
+    color: #fff;
+    text-align: center;
+    font-family: "Inter 18pt";
+    font-size: 2.4rem;
+    font-weight: 600;
+    line-height: 133.333%;
+    @include abstracts.breakpoint(lg) {
+      font-size: 2rem;
+    }
+    @include abstracts.breakpoint(md) {
+      font-size: 1.4rem;
+    }
+  }
+  &__content {
+    margin-top: 140px;
+    @include abstracts.breakpoint(lg) {
+      margin-top: 40px;
+    }
+  }
+  &__image {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    border-radius: 8px;
+  }
+  &__img {
+    border-radius: 8px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__item--name {
+    margin-top: 20px;
+    color: #2d3134;
+    font-family: "Inter 18pt";
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 133.333%;
+    @include abstracts.breakpoint(md) {
+      font-size: 1.8rem;
+    }
+  }
+  &__item {
+    padding: 10px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    &:hover {
+      box-shadow: 8px 28px 15px -3px rgba(0, 0, 0, 0.1),
+        0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+  }
+  &__page {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    @include abstracts.breakpoint(lg) {
+      margin-top: 40px;
+    }
+  }
+}

@@ -238,5 +238,131 @@
       "twister": "abcd.com",
       "insta": "abcd.com"
     }
-  ]
+  ],
+  "destination": {
+    "page1": [
+      {
+        "id": 1,
+        "img": "/images/destination/content/image1.jpg",
+        "name": "Vinh Ha Long"
+      },
+      {
+        "id": 2,
+        "img": "/images/destination/content/image2.jpg",
+        "name": "Trang An - Ninh Binh"
+      },
+      {
+        "id": 3,
+        "img": "/images/destination/content/image3.jpg",
+        "name": "Cu Lao Cham - Quang Nam"
+      },
+      {
+        "id": 4,
+        "img": "/images/destination/content/image4.jpg",
+        "name": "Co Do Hue - Viet Nam"
+      },
+      {
+        "id": 5,
+        "img": "/images/destination/content/image5.jpg",
+        "name": "Ba Ria - Vung Tau"
+      },
+      {
+        "id": 6,
+        "img": "/images/destination/content/image6.jpg",
+        "name": "Mui Ne - Phan Thiet"
+      },
+      {
+        "id": 7,
+        "img": "/images/destination/content/image7.jpg",
+        "name": "Chua Mot Cot"
+      },
+      {
+        "id": 8,
+        "img": "/images/destination/content/image8.jpg",
+        "name": "Pho Co - Hoi An"
+      },
+      {
+        "id": 9,
+        "img": "/images/destination/content/image9.jpg",
+        "name": "Dao Ngoc - Phu Quoc"
+      },
+      {
+        "id": 10,
+        "img": "/images/destination/content/image10.jpg",
+        "name": "Cho Noi - Cai Be "
+      },
+      {
+        "id": 11,
+        "img": "/images/destination/content/image11.jpg",
+        "name": "Dinh Fansipan "
+      },
+      {
+        "id": 12,
+        "img": "/images/destination/content/image12.jpg",
+        "name": "Thac Ban Doc "
+      }
+    ],
+    "page2": [
+      {
+        "id": 13,
+        "img": "/images/destination/content/image13.jpg",
+        "name": "Ta Xua - Son La"
+      },
+      {
+        "id": 14,
+        "img": "/images/destination/content/image14.jpg",
+        "name": "Comming soon..."
+      },
+      {
+        "id": 15,
+        "img": "/images/destination/content/image14.jpg",
+        "name": "Comming soon..."
+      },
+      {
+        "id": 16,
+        "img": "/images/destination/content/image14.jpg",
+        "name": "Comming soon..."
+      },
+      {
+        "id": 17,
+        "img": "/images/destination/content/image14.jpg",
+        "name": "Comming soon..."
+      },
+      {
+        "id": 18,
+        "img": "/images/destination/content/image14.jpg",
+        "name": "Comming soon..."
+      },
+      {
+        "id": 19,
+        "img": "/images/destination/content/image14.jpg",
+        "name": "Comming soon..."
+      },
+      {
+        "id": 20,
+        "img": "/images/destination/content/image14.jpg",
+        "name": "Comming soon..."
+      },
+      {
+        "id": 21,
+        "img": "/images/destination/content/image14.jpg",
+        "name": "Comming soon..."
+      },
+      {
+        "id": 22,
+        "img": "/images/destination/content/image14.jpg",
+        "name": "Comming soon..."
+      },
+      {
+        "id": 23,
+        "img": "/images/destination/content/image14.jpg",
+        "name": "Comming soon..."
+      },
+      {
+        "id": 24,
+        "img": "/images/destination/content/image14.jpg",
+        "name": "Comming soon..."
+      }
+    ]
+  }
 }

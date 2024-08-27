@@ -15,8 +15,8 @@
   }
   &__slider {
     height: 590px;
-    position: absolute; // Đặt position tùy thuộc vào cách bạn muốn slider được đặt
-    z-index: 10; // Đảm bảo slider có giá trị z-index thấp hơn Header
+    position: absolute;
+    z-index: 10;
     top: 0;
     left: 0;
     right: 0;
