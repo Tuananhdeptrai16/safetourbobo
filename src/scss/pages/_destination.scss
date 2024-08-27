@@ -52,7 +52,7 @@
       font-size: 6rem;
     }
     @include abstracts.breakpoint(md) {
-      margin-top: 30px;
+      margin-top: 40px;
       font-size: 3rem;
     }
   }
@@ -67,6 +67,7 @@
       font-size: 2rem;
     }
     @include abstracts.breakpoint(md) {
+      margin: 3px;
       font-size: 1.4rem;
     }
   }

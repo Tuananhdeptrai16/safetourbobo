@@ -67,6 +67,9 @@
     @include abstracts.breakpoint(lg) {
       font-size: 6rem;
     }
+    @include abstracts.breakpoint(md) {
+      font-size: 4rem;
+    }
   }
   &__intro {
     margin-top: 140px;
