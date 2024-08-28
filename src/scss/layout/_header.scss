@@ -20,11 +20,16 @@
     transition: all 1s ease;
     border-radius: 20px 0px 0px 20px;
   }
-  &__menu-dropdown {
+  &__menu-dropdown--wrap {
     padding: 40px;
+  }
+  &__menu-dropdown {
+    height: 417px;
+    margin-top: 30px;
     display: flex;
     flex-direction: column;
     gap: 50px;
+    overflow-y: auto;
   }
   &__menu-dropdown .header__link {
     font-size: 2rem;

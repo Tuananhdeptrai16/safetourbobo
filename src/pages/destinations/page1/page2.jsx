@@ -14,8 +14,10 @@ export const Page2 = () => {
     <>
       <div className="destination__cover">
         <div className="destination__heading-cover">
-          <h1 className="destination__heading">Destinations</h1>
-          <p className="destination__desc">Explore Tours By Destinations</p>
+          <h1 className="destination__heading-layout">Destinations</h1>
+          <p className="destination__desc-layout">
+            Explore Tours By Destinations
+          </p>
         </div>
         <picture>
           <source
@@ -30,17 +32,17 @@ export const Page2 = () => {
         </picture>
       </div>
       <div className="container">
-        <div className="destination__content">
+        <div className="destination__content-layout">
           <div className="row row-cols-4 gy-4 row-cols-lg-2 gy-lg-2 row-cols-md-1 gy-md-3">
             {destinations.map((item) => {
               return (
                 <div className="col" key={item.id}>
                   <div className="destination__item">
-                    <figure className="destination__image">
+                    <figure className="destination__image-layout">
                       <img
                         src={`${process.env.PUBLIC_URL}${item.img}`}
                         alt={item.name}
-                        className="destination__img"
+                        className="destination__img-layout"
                       />
                     </figure>
                     <p className="destination__item--name">{item.name}</p>
