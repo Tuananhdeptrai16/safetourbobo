@@ -8,7 +8,8 @@ export const Destination = () => {
       .then((response) => response.json())
       .then((data) => {
         setDestinations(data.destination.page1 || []);
-      });
+      })
+      .catch((error) => console.log(error));
   }, []);
   return (
     <>

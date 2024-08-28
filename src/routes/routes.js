@@ -7,6 +7,7 @@ import { Blog } from "../pages/blog/blog";
 import Contact from "../pages/contacts/contact";
 import NotFoundPage from "../pages/notFoundPage/notfoundpage";
 import { Page2 } from "../pages/destinations/page1/page2";
+import { BlogPage2 } from "../pages/blog/page2";
 
 const AppRoutes = () => {
   return (
@@ -20,6 +21,7 @@ const AppRoutes = () => {
       />
       <Route path="/safetourbobo/destinations/page/2" element={<Page2 />} />
       <Route path="/safetourbobo/blog" element={<Blog />} />
+      <Route path="/safetourbobo/blog/page/2" element={<BlogPage2 />} />
       <Route path="/safetourbobo/contact" element={<Contact />} />
       <Route path="*" element={<NotFoundPage />} />
     </Routes>

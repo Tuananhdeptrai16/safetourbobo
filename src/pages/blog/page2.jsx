@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-export const Blog = () => {
+import { Link, useNavigate } from "react-router-dom";
+export const BlogPage2 = () => {
+  const navigation = useNavigate();
   const [recents, setRecents] = useState([]);
   const [blogs, setBlogs] = useState([]);
   useEffect(() => {
@@ -8,7 +9,7 @@ export const Blog = () => {
       .then((response) => response.json())
       .then((data) => {
         setRecents(data.blog.recent);
-        setBlogs(data.blog.blogsItem.blogPage1);
+        setBlogs(data.blog.blogsItem.blogPage2);
       })
       .catch((error) => console.log(error));
   }, []);
@@ -82,7 +83,7 @@ export const Blog = () => {
                   </figure>
                   <section className="blog__content">
                     <h2 className="blog__title">{blog.title}</h2>
-                    <p className="blog__desc line-clamp">{blog.desc}</p>
+                    <p className="blog__desc">{blog.desc}</p>
                     <Link to={"#!"} className="blog__link">
                       Read more
                     </Link>
@@ -94,10 +95,13 @@ export const Blog = () => {
         </div>
         <div className="blog__button">
           <Link
-            to={`${process.env.PUBLIC_URL}/blog/page/2`}
             className="btn blog__more"
+            to={`${process.env.PUBLIC_URL}/blog`}
+            onClick={() => {
+              navigation("/blog");
+            }}
           >
-            See more
+            ComeBack
           </Link>
         </div>
       </div>

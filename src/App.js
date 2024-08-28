@@ -18,6 +18,7 @@ function App() {
       "/safetourbobo/destinations",
       "/safetourbobo/destinations/page/1",
       "/safetourbobo/destinations/page/2",
+      "/safetourbobo/blog/page/2",
       "/safetourbobo/blog",
       "/safetourbobo/contact",
     ];

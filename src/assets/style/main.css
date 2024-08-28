@@ -3310,6 +3310,12 @@ strong {
   transform: translateX(-50%);
   z-index: -1;
 }
+@media (max-width: 991.98px) {
+  .blog__image--decor {
+    top: -175px;
+    scale: 0.8;
+  }
+}
 .blog__heading {
   color: #2d3134;
   text-align: center;
@@ -3318,11 +3324,36 @@ strong {
   font-weight: 700;
   line-height: 112.903%;
 }
+@media (max-width: 1199.98px) {
+  .blog__heading {
+    font-size: 5.2rem;
+  }
+}
+@media (max-width: 991.98px) {
+  .blog__heading {
+    font-size: 4rem;
+  }
+}
 .blog__popular {
   margin-top: 140px;
   display: flex;
   justify-content: space-between;
   gap: 56px;
+}
+@media (max-width: 1199.98px) {
+  .blog__popular {
+    flex-direction: column;
+  }
+}
+@media (max-width: 991.98px) {
+  .blog__popular {
+    margin-top: 70px;
+  }
+}
+@media (max-width: 575.98px) {
+  .blog__popular {
+    gap: 30px;
+  }
 }
 .blog__image-main {
   position: relative;
@@ -3330,6 +3361,11 @@ strong {
   height: 416px;
   border-radius: 10px;
   background: lightgray 0px -25.886px/100% 112.686% no-repeat;
+}
+@media (max-width: 991.98px) {
+  .blog__image-main {
+    min-width: 0;
+  }
 }
 .blog__image-main--img {
   border-radius: 10px;
@@ -3348,6 +3384,22 @@ strong {
   font-weight: 700;
   line-height: 125%;
 }
+@media (max-width: 1199.98px) {
+  .blog__image--title {
+    width: 100%;
+  }
+}
+@media (max-width: 991.98px) {
+  .blog__image--title {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 575.98px) {
+  .blog__image--title {
+    font-size: 3rem;
+    font-size: 2.4rem;
+  }
+}
 .blog__list--content {
   padding: 30px 30px 44px 30px;
 }
@@ -3356,6 +3408,11 @@ strong {
   height: 540px;
   border-radius: 10px;
   background: #ececec;
+}
+@media (max-width: 1199.98px) {
+  .blog__popular--list {
+    width: 100%;
+  }
 }
 .blog__search {
   display: flex;
@@ -3382,6 +3439,11 @@ strong {
   font-weight: 400;
   line-height: 162.5%;
 }
+@media (max-width: 1199.98px) {
+  .blog__search--input {
+    width: 100%;
+  }
+}
 .blog__recent {
   height: 310px;
   margin-top: 40px;
@@ -3391,7 +3453,7 @@ strong {
   margin-top: 40px;
   color: #2d3134;
   font-family: "Inter 18pt";
-  font-size: 24px;
+  font-size: 2.4rem;
   font-weight: 600;
   line-height: 133.333%;
   margin-bottom: 30px;
@@ -3406,6 +3468,11 @@ strong {
   height: 90px;
   border-radius: 8px;
   background: lightgray 0px -55.481px/100% 166.578% no-repeat;
+}
+@media (max-width: 1199.98px) {
+  .blog__item--image {
+    width: 300px;
+  }
 }
 .blog__item--img {
   position: absolute;
@@ -3425,6 +3492,17 @@ strong {
   font-weight: 500;
   line-height: 150%;
 }
+@media (max-width: 1199.98px) {
+  .blog__item--title {
+    width: 100%;
+    font-size: 2rem;
+  }
+}
+@media (max-width: 575.98px) {
+  .blog__item--title {
+    font-size: 1.6rem;
+  }
+}
 .blog__item + .blog__item {
   margin-top: 30px;
 }
@@ -3433,6 +3511,11 @@ strong {
 }
 .blog__main {
   margin-top: 112px;
+}
+@media (max-width: 575.98px) {
+  .blog__main {
+    margin-top: 60px;
+  }
 }
 .blog__image {
   position: relative;
@@ -3449,6 +3532,7 @@ strong {
   right: 0;
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 .blog__content {
   margin-top: 20px;
@@ -3461,6 +3545,12 @@ strong {
   font-weight: 600;
   line-height: 133.333%;
 }
+@media (max-width: 1199.98px) {
+  .blog__title {
+    width: 100%;
+    font-size: 2rem;
+  }
+}
 .blog__desc {
   margin-top: 16px;
   max-width: 370px;
@@ -3469,6 +3559,11 @@ strong {
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 162.5%;
+}
+@media (max-width: 575.98px) {
+  .blog__desc {
+    margin-top: 10px;
+  }
 }
 .blog__link {
   margin-top: 20px;
@@ -3481,6 +3576,12 @@ strong {
 .blog__link:hover {
   text-decoration: underline;
 }
+@media (max-width: 575.98px) {
+  .blog__link {
+    margin-top: 16px;
+    font-size: 1.6rem;
+  }
+}
 .blog__button {
   display: flex;
   justify-content: center;
@@ -3491,6 +3592,14 @@ strong {
   align-items: center;
   justify-content: center;
   margin-top: 80px;
+}
+@media (max-width: 575.98px) {
+  .blog__more {
+    width: 191px;
+    height: 66px;
+    font-size: 1.8rem;
+    margin-top: 60px;
+  }
 }
 
 .header {
