@@ -364,5 +364,107 @@
         "name": "Comming soon..."
       }
     ]
+  },
+  "blog": {
+    "recent": [
+      {
+        "id": 1,
+        "title": "7 Tips For Nomads On A Budget Trips",
+        "img": "/images/destination/content/image1.jpg"
+      },
+      {
+        "id": 2,
+        "title": "Luxury travel: the most remote resorts in Philippines",
+        "img": "/images/destination/content/image2.jpg"
+      },
+      {
+        "id": 3,
+        "title": "Top travel destinations the experts say",
+        "img": "/images/destination/content/image3.jpg"
+      },
+      {
+        "id": 4,
+        "title": "7 Tips For Nomads On A Budget Trips",
+        "img": "/images/destination/content/image4.jpg"
+      }
+    ],
+    "blogsItem": {
+      "blogPage1": [
+        {
+          "id": 1,
+          "img": "/images/destination/content/image1.jpg",
+          "title": "On the Shores of a Pink Lake in Australia",
+          "desc": "Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache fanny pack nostrud. Photo booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia esse nihil..."
+        },
+        {
+          "id": 2,
+          "img": "/images/destination/content/image2.jpg",
+          "title": "On the Shores of a Pink Lake in Australia",
+          "desc": "Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache fanny pack nostrud. Photo booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia esse nihil..."
+        },
+        {
+          "id": 3,
+          "img": "/images/destination/content/image3.jpg",
+          "title": "On the Shores of a Pink Lake in Australia",
+          "desc": "Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache fanny pack nostrud. Photo booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia esse nihil..."
+        },
+        {
+          "id": 4,
+          "img": "/images/destination/content/image4.jpg",
+          "title": "On the Shores of a Pink Lake in Australia",
+          "desc": "Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache fanny pack nostrud. Photo booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia esse nihil..."
+        },
+        {
+          "id": 5,
+          "img": "/images/destination/content/image5.jpg",
+          "title": "On the Shores of a Pink Lake in Australia",
+          "desc": "Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache fanny pack nostrud. Photo booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia esse nihil..."
+        },
+        {
+          "id": 6,
+          "img": "/images/destination/content/image6.jpg",
+          "title": "On the Shores of a Pink Lake in Australia",
+          "desc": "Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache fanny pack nostrud. Photo booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia esse nihil..."
+        }
+      ],
+      "blogPage2": [
+        {
+          "id": 7,
+          "img": "/images/destination/content/image7.jpg",
+          "title": "On the Shores of a Pink Lake in Australia",
+          "desc": "Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache fanny pack nostrud. Photo booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia esse nihil..."
+        },
+        {
+          "id": 8,
+          "img": "/images/destination/content/image8.jpg",
+          "title": "On the Shores of a Pink Lake in Australia",
+          "desc": "Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache fanny pack nostrud. Photo booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia esse nihil..."
+        },
+        {
+          "id": 9,
+          "img": "/images/destination/content/image9.jpg",
+          "title": "On the Shores of a Pink Lake in Australia",
+          "desc": "Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache fanny pack nostrud. Photo booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia esse nihil..."
+        },
+        {
+          "id": 10,
+          "img": "/images/destination/content/image10.jpg",
+          "title": "On the Shores of a Pink Lake in Australia",
+          "desc": "Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache fanny pack nostrud. Photo booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia esse nihil..."
+        },
+        {
+          "id": 11,
+          "img": "/images/destination/content/image11.jpg",
+          "title": "On the Shores of a Pink Lake in Australia",
+          "desc": "Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache fanny pack nostrud. Photo booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia esse nihil..."
+        },
+        {
+          "id": 12,
+          "img": "/images/destination/content/image12.jpg",
+          "title": "On the Shores of a Pink Lake in Australia",
+          "desc": "Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache fanny pack nostrud. Photo booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia esse nihil..."
+        }
+      ]
+    }
   }
 }
