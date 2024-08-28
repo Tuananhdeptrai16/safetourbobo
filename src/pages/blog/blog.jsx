@@ -59,7 +59,9 @@ export const Blog = () => {
                             className="blog__item--img"
                           />
                         </figure>
-                        <p className="blog__item--title">{recent.title}</p>
+                        <p className="blog__item--title line-clamp">
+                          {recent.title}
+                        </p>
                       </div>
                     );
                   })}
@@ -81,7 +83,10 @@ export const Blog = () => {
                     />
                   </figure>
                   <section className="blog__content">
-                    <h2 className="blog__title">{blog.title}</h2>
+                    <Link to={"/safetourbobo/blog/content/1"}>
+                      {" "}
+                      <h2 className="blog__title">{blog.title}</h2>
+                    </Link>
                     <p className="blog__desc line-clamp">{blog.desc}</p>
                     <Link to={"#!"} className="blog__link">
                       Read more
