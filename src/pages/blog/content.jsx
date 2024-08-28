@@ -39,7 +39,7 @@ export const BlogContent = () => {
                   />
                   <p className="blog__content--text">{content.content2}</p>
                   <h3 className="blog__content--heading">{content.heading3}</h3>
-                  <div className="row row-cols-2 gy-3">
+                  <div className="row row-cols-2 gy-3 gy-md-1">
                     <div className="col">
                       <img
                         src={`${process.env.PUBLIC_URL}${content.image2}`}

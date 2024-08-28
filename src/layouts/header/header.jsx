@@ -53,6 +53,14 @@ const Header = () => {
             </li>
             <li>
               <NavLink
+                to={`${process.env.PUBLIC_URL}/tour`}
+                className={(params) => `${activeClass(params)} nav__link`}
+              >
+                Tour
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
                 to={`${process.env.PUBLIC_URL}/contact`}
                 className={(params) => `${activeClass(params)} nav__link`}
               >
