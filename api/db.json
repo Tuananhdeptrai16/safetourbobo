@@ -375,7 +375,7 @@
       {
         "id": 2,
         "title": "Luxury travel: the most remote resorts in Philippines",
-        "img": "/images/destination/content/image2.jpg"
+        "img": "/images/destination/content/image3.jpg"
       },
       {
         "id": 3,
@@ -463,6 +463,24 @@
           "img": "/images/destination/content/image12.jpg",
           "title": "On the Shores of a Pink Lake in Australia",
           "desc": "Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache fanny pack nostrud. Photo booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia esse nihil..."
+        }
+      ]
+    },
+    "blogsContents": {
+      "blogContent1": [
+        {
+          "id": 1,
+          "heading1": "The Sea is Calling",
+          "content1": "Sitting serenely on the turquoise coasts of the Caribbean Sea lie two properties that embody paradise in quiet luxury. Park Hyatt St. Kitts and Andaz Mayakoba are the answers to your desires for a sun-filled ocean getaway. Whether vacationing with the whole family, or lounging your time away with a loved one, both properties capture the essence of resort living on beautiful grounds with unforgettable itineraries.",
+          "heading2": "Park Hyatt ST. KIitts",
+          "image1": "/images/destination/content/image4.jpg",
+          "content2": "Amidst sugar mill ruins and grassy sloping peaks, Park Hyatt St. Kitts brings a sense of rich historic charm to sandy beaches and coastal living that one rarely finds elsewhere. Thin palms careen and crane throughout the shoreline as thick, blooming vegetation continues to the summit of each mountain. Park Hyatt St. Kitts is strategically placed to not only capture the essence of the island, but to allow guests to discover more through aquatic adventures, thoughtful dining experiences, and more.",
+          "heading3": "What to See",
+          "image2": "/images/destination/content/image3.jpg",
+          "image3": "/images/destination/content/image1.jpg",
+          "image4": "/images/destination/content/image13.jpg",
+          "image5": "/images/destination/content/image12.jpg",
+          "content3": "Explore the island of St. Kitts and take the beaten path to adventure. Try an off-road expedition through the mountains and a chance to see the gorgeous ruins and native monkeys. Explore the historic stately homes of sugar mill plantations and engage with the ever-welcoming Kittitian population. To see more, take a short 20-minute water taxi ride over to St. Kitts’ sister island, Nevis, where a greater sense of privacy and seclusion can be found."
         }
       ]
     }
