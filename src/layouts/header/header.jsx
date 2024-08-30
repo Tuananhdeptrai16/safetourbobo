@@ -62,18 +62,15 @@ const Header = () => {
                 Tour
               </NavLink>
             </li>
-            <li>
-              <NavLink
-                to={`${process.env.PUBLIC_URL}/contact`}
-                className={(params) => `${activeClass(params)} nav__link`}
-              >
-                Contact
-              </NavLink>
-            </li>
           </ul>
         </nav>
         <div className="header__button">
-          <button className="btn header__btn">Contact us</button>
+          <Link
+            to={`${process.env.PUBLIC_URL}/contact`}
+            className="btn header__btn"
+          >
+            Contact us
+          </Link>
           <button onClick={handleClickChangeShow} className="header__showMenu">
             <img
               src={`${process.env.PUBLIC_URL}/images/icon/Menu.svg`}
@@ -133,14 +130,7 @@ const Header = () => {
                     Tour
                   </NavLink>
                 </li>
-                <li>
-                  <NavLink
-                    to={`${process.env.PUBLIC_URL}/contact`}
-                    className={(params) => `${activeClass(params)} nav__link`}
-                  >
-                    Contact
-                  </NavLink>
-                </li>
+
                 <li>
                   <NavLink
                     to={`${process.env.PUBLIC_URL}/contact`}

@@ -39,6 +39,9 @@
     gap: 30px;
   }
   &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     @include abstracts.breakpoint(md) {
       display: none;
     }

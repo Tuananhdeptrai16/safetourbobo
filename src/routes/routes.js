@@ -27,6 +27,7 @@ const AppRoutes = () => {
       <Route path="/safetourbobo/blog" element={<Blog />} />
       <Route path="/safetourbobo/blog/page/2" element={<BlogPage2 />} />
       <Route path="/safetourbobo/blog/content/1" element={<BlogContent />} />
+
       <Route path="/safetourbobo/contact" element={<Contact />} />
       <Route path="/safetourbobo/commingsoon" element={<ComingSoon />} />
       <Route path="*" element={<NotFoundPage />} />
