@@ -35,6 +35,7 @@
     display: flex;
     justify-content: space-between;
     gap: 56px;
+    overflow: hidden;
     @include abstracts.breakpoint(xl) {
       flex-direction: column;
     }
@@ -44,10 +45,13 @@
     @include abstracts.breakpoint(sm) {
       gap: 30px;
     }
+    &--content {
+      overflow: hidden;
+    }
   }
   &__image-main {
     position: relative;
-    min-width: 700px;
+    min-width: 500px;
     height: 416px;
     border-radius: 10px;
     background: lightgray 0px -25.886px / 100% 112.686% no-repeat;
@@ -65,6 +69,13 @@
       right: 0;
       width: 100%;
       height: 100%;
+    }
+  }
+  &__container {
+    flex: 1;
+    min-width: 721px;
+    @include abstracts.breakpoint(xxl) {
+      min-width: 300px;
     }
   }
   &__image--title {
@@ -89,6 +100,7 @@
     padding: 30px 30px 44px 30px;
   }
   &__popular--list {
+    flex: 1;
     width: 488px;
     height: 540px;
     border-radius: 10px;
@@ -122,6 +134,23 @@
       }
       @include abstracts.breakpoint(xl) {
         width: 100%;
+      }
+      &:hover {
+        border: 2px solid lightgrey;
+        box-shadow: 0px 0px 20px -17px;
+      }
+      &:active {
+        transform: scale(0.95);
+      }
+      &:focus {
+        border: 2px solid grey;
+      }
+      &::placeholder {
+        color: #b3b4b5;
+        font-family: "Inter 18pt";
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 100%;
       }
     }
   }

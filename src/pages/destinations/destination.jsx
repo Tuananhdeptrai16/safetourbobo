@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import PageNumber from "../../components/pagination/pagination";
-
+import { Link } from "react-router-dom";
 export const Destination = () => {
   const [destinations, setDestinations] = useState([]);
   useEffect(() => {
@@ -37,7 +37,15 @@ export const Destination = () => {
           <div className="row row-cols-4 gy-4 row-cols-lg-2 gy-lg-2 row-cols-md-1 gy-md-3">
             {destinations.map((item) => {
               return (
-                <div className="col" key={item.id}>
+                <Link
+                  to={`${
+                    item.name === "Coming soon..."
+                      ? "/safetourbobo/commingsoon"
+                      : "#!"
+                  }`}
+                  className="col"
+                  key={item.id}
+                >
                   <div className="destination__item">
                     <figure className="destination__image-layout">
                       <img
@@ -48,7 +56,7 @@ export const Destination = () => {
                     </figure>
                     <p className="destination__item--name">{item.name}</p>
                   </div>
-                </div>
+                </Link>
               );
             })}
           </div>

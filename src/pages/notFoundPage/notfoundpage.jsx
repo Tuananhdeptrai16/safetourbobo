@@ -8,6 +8,7 @@ const NotFoundPage = () => {
           <img
             src={`${process.env.PUBLIC_URL}/images/notfound/flower.svg`}
             alt=""
+            className="d-xxl-none"
           />
           <img
             src={`${process.env.PUBLIC_URL}/images/notfound/boy.svg`}

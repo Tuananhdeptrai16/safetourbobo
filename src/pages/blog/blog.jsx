@@ -1,6 +1,34 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import Slider from "react-slick";
+
 export const Blog = () => {
+  const settings = {
+    autoplay: true, // Kích hoạt chế độ tự động trượt
+    autoplaySpeed: 2000,
+    infinite: true, // Không lặp lại slider khi đến cuối
+    dots: false,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
   const [recents, setRecents] = useState([]);
   const [blogs, setBlogs] = useState([]);
   useEffect(() => {
@@ -24,17 +52,25 @@ export const Blog = () => {
           />
         </div>
         <div className="blog__popular">
-          <div className="blog__popular--content">
-            <figure className="blog__image-main">
-              <img
-                src={`${process.env.PUBLIC_URL}/images/blog/cover.png`}
-                alt=""
-                className="blog__image-main--img"
-              />
-            </figure>
-            <p className="blog__image--title">
-              Exploring Argentina and Chile by Bus
-            </p>
+          <div className="blog__container">
+            <Slider {...settings}>
+              {blogs.map((blog) => {
+                return (
+                  <div key={blog.id}>
+                    <div className="blog__popular--content">
+                      <figure className="blog__image-main">
+                        <img
+                          src={`${process.env.PUBLIC_URL}${blog.img}`}
+                          alt=""
+                          className="blog__image-main--img"
+                        />
+                      </figure>
+                      <p className="blog__image--title">{blog.title}</p>
+                    </div>
+                  </div>
+                );
+              })}
+            </Slider>
           </div>
           <div className="blog__popular--list">
             <div className="blog__list--content">
