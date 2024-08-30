@@ -528,5 +528,24 @@
       "duration": "9 days",
       "price": "$6,500"
     }
-  ]
+  ],
+  "contact": {
+    "info": [
+      {
+        "id": 1,
+        "icon": "/images/icon/mail.svg",
+        "text": "2369 Robinson Lane Jackson, OH 45640"
+      },
+      {
+        "id": 2,
+        "icon": "/images/icon/call.svg",
+        "text": "(+88) 017 000 00000"
+      },
+      {
+        "id": 3,
+        "icon": "/images/icon/location1.svg",
+        "text": "Info@example.com"
+      }
+    ]
+  }
 }
