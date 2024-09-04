@@ -151,7 +151,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="col-6 offset-1">
+          <div className="col-6 offset-1 offset-xl-0">
             <div className="hero__right">
               <figure className="hero__images">
                 <img
