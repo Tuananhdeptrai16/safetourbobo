@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import PageNumber from "../../components/pagination/pagination";
 import { Link } from "react-router-dom";
+import { MyIframe } from "../../components/iframe/iframe";
 export const Destination = () => {
   const [destinations, setDestinations] = useState([]);
   useEffect(() => {

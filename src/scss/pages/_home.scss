@@ -4,6 +4,11 @@
   @include abstracts.breakpoint(md) {
     margin-top: 0;
   }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
   &__left {
     margin-top: 64px;
     @include abstracts.breakpoint(md) {
@@ -11,7 +16,7 @@
     }
   }
   &__heading {
-    width: 453px;
+    width: 468px;
     color: #2d3134;
     font-size: 6.2rem;
     font-weight: 700;
@@ -26,7 +31,7 @@
 
   &__desc {
     margin-top: 17px;
-    width: 352px;
+    width: 380px;
     color: #676a6c;
     font-family: "Inter 18pt";
     font-size: 1.6rem;
@@ -44,7 +49,7 @@
     display: flex;
     align-items: center;
     margin-top: 51px;
-    gap: 28px;
+    gap: 40px;
     @include abstracts.breakpoint(xl) {
       gap: 150px;
     }
@@ -54,6 +59,9 @@
     }
   }
   &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 191px;
     font-size: 18px;
     font-weight: 600;
@@ -68,6 +76,10 @@
     display: flex;
     align-items: center;
     gap: 13px;
+    transition: all 0.2 ease-in-out;
+    &:hover {
+      scale: 1.1;
+    }
   }
   &__media {
     width: 60px;
@@ -77,12 +89,21 @@
     align-items: center;
     justify-content: center;
     border: 4px solid #ff7b29;
+    &--icon {
+      margin-left: 4px;
+      width: 14px;
+      height: 14px;
+    }
   }
   &__link-more {
     color: #4d4f56;
     font-size: 1.6rem;
     font-weight: 600;
     line-height: 162.5%;
+    &:hover {
+      text-decoration: underline;
+      color: #0071dc;
+    }
   }
   &__images {
     position: relative;
@@ -120,20 +141,26 @@
     }
   }
   &__countdown {
-    margin-top: 131px;
+    position: absolute;
+    right: -100px;
+    bottom: 17px;
+    z-index: 20;
+    background: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1),
+      0px 10px 15px -3px rgba(0, 0, 0, 0.1);
   }
   &__item {
     display: flex;
     gap: 20px;
     align-items: center;
   }
-  &__item + &__item {
-    margin-top: 44px;
-  }
+
   &__award-total {
     color: #0a192d;
     font-family: "Inter 18pt";
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 800;
     line-height: 133.333%;
   }
@@ -150,46 +177,6 @@
     background: #fff;
     border-radius: 20px;
     box-shadow: 0 0 5px 1px #ccc;
-  }
-  &__circle {
-    width: 92px;
-    height: 92px;
-  }
-  &__timer {
-    position: absolute;
-    top: 273px;
-    left: -70px;
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 18px;
-    width: 163px;
-    height: 202px;
-    border-radius: 16px;
-    background: #fff;
-    box-shadow: 0px 50px 100px -25px rgba(0, 0, 0, 0.1);
-  }
-  &__timer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 9px;
-  }
-  &__total-trip {
-    color: #0d1e3f;
-    font-family: "Inter 18pt";
-    font-size: 2.4rem;
-    font-weight: 700;
-    line-height: 100%;
-  }
-  &__trip-desc {
-    color: #aeb4cf;
-    font-family: "Inter 18pt";
-    font-size: 1.2rem;
-    font-weight: 500;
-    line-height: 100%;
   }
   &__search-list {
     display: flex;
@@ -263,9 +250,6 @@
       align-items: flex-start;
       margin-top: 51px;
     }
-  }
-  &__item {
-    margin-top: 16px;
   }
 }
 // product

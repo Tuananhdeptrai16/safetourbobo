@@ -6,7 +6,7 @@ import AppRoutes from "./routes/routes";
 import { useLocation } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
+import StoreContext from "./context";
 function App() {
   const [showHeaderFooter, setShowHeaderFooter] = useState(true);
   const location = useLocation();
@@ -31,11 +31,11 @@ function App() {
     }
   }, [location]);
   return (
-    <div>
+    <StoreContext.Provider value={{ location }}>
       {showHeaderFooter && <Header />}
       <AppRoutes />
       {showHeaderFooter && <Footer />}
-    </div>
+    </StoreContext.Provider>
   );
 }
 

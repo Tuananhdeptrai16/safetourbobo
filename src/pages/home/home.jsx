@@ -1,11 +1,11 @@
 import React, { useRef } from "react";
-import { Link } from "react-router-dom";
-import { TimerCircle } from "../../components/countdowntimer/countdowncircle";
+import { Link, NavLink } from "react-router-dom";
 import SearchHero from "../../components/search/search";
 import Slider from "react-slick";
 import { useState, useEffect } from "react";
 import { Reason } from "../../components/reason/reason";
 import { InputFooter } from "../../components/input/input";
+import { MyVideo } from "../../components/iframe/iframe";
 const Home = () => {
   const [products, setProducts] = useState([]);
 
@@ -103,9 +103,23 @@ const Home = () => {
   const handleMouseLeave = () => {
     setIsActive(null);
   };
-
+  const [showVideo, setShowVideo] = useState(false);
+  const handleShowVideo = () => {
+    setShowVideo(!showVideo);
+  };
   return (
     <div className="container">
+      {showVideo && (
+        <img
+          onClick={handleShowVideo}
+          src={`${process.env.PUBLIC_URL}/images/icon/x.svg`}
+          alt=""
+          className="video__cancel--icon"
+        />
+      )}
+      {showVideo && <MyVideo></MyVideo>}
+      {showVideo && <div className="overlay active"></div>}
+
       <div className="hero">
         <div className="row hero__wrap">
           <div className="col-5 col-xl-12">
@@ -116,12 +130,18 @@ const Home = () => {
                 destination information and inspiration from us.
               </p>
               <div className="hero__link">
-                <button className="btn hero__btn">Discover Now</button>
-                <div className="hero__more">
+                <NavLink
+                  to={`/safetourbobo/destinations`}
+                  className="btn hero__btn"
+                >
+                  Discover Now
+                </NavLink>
+                <div onClick={handleShowVideo} className="hero__more">
                   <figure className="hero__media">
                     <img
                       src={`${process.env.PUBLIC_URL}/images/icon/media.svg`}
                       alt=""
+                      className="hero__media--icon"
                     />
                   </figure>
                   <Link className="hero__link-more" href="">
@@ -131,7 +151,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="col-7">
+          <div className="col-6 offset-1">
             <div className="hero__right">
               <figure className="hero__images">
                 <img
@@ -145,19 +165,8 @@ const Home = () => {
                   alt=""
                 />
                 <div className="hero__separate"></div>
-                <div className="hero__timer">
-                  <TimerCircle className="hero__circle">
-                    <p>Xin chao</p>
-                  </TimerCircle>
-                  <div className="hero__timer-content">
-                    <span className="hero__total-trip">224</span>
-                    <p className="hero__trip-desc">Total trip (month)</p>
-                  </div>
-                </div>
-              </figure>
-              <div className="hero__countdown">
-                <div className="hero__list d-md-none">
-                  <div>
+                <div className="hero__countdown d-md-none">
+                  <div className="hero__list ">
                     {countDownsList.map((countdown) => {
                       return (
                         <div className="hero__item" key={countdown.total}>
@@ -177,7 +186,7 @@ const Home = () => {
                     })}
                   </div>
                 </div>
-              </div>
+              </figure>
             </div>
           </div>
         </div>
