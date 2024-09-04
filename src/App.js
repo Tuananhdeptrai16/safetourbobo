@@ -21,7 +21,6 @@ function App() {
       "/safetourbobo/blog/page/2",
       "/safetourbobo/blog/content/1",
       "/safetourbobo/blog",
-      "/safetourbobo/contact",
       "/safetourbobo/tour",
     ];
     if (validPaths.includes(location.pathname)) {

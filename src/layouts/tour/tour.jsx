@@ -17,7 +17,6 @@ export const Tour = () => {
       <div className="tour">
         <div className="tour__introduce">
           <h1 className="blog__heading">Tour</h1>
-
           <img
             src={`${process.env.PUBLIC_URL}/images/blog/decor.svg`}
             alt=""
