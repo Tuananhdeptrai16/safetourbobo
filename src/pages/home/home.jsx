@@ -132,7 +132,7 @@ const Home = () => {
               <div className="hero__link">
                 <NavLink
                   to={`/safetourbobo/destinations`}
-                  className="btn hero__btn"
+                  className="btn hero__btn btn__hero"
                 >
                   Discover Now
                 </NavLink>
